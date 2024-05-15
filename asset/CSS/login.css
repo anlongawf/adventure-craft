@@ -1,0 +1,122 @@
+body {
+  background: url(../../asset/IMG/banner.webp) no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.error{
+  color: red;
+  font-size: 10px;
+}
+#output {
+  color: red;
+  font-size: 15px;
+}
+
+.form {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-head {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  font-size: 1.5em;
+  color: rgb(0, 0, 0);
+}
+
+.form label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgb(0, 0, 0);
+}
+
+.form input[type='text'],
+.form input[type='password'] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.log-in,
+.reg {
+  color: white;
+}
+
+.form button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  background-color: #73b9b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.form button a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.form button a:hover {
+  text-decoration: underline;
+}
+
+.sign-in {
+  color: #333;
+}
+
+.rot-reg {
+  display: flex;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.rot-reg p {
+  margin: 0;
+}
+
+.rot-reg a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.rot-reg a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.here {
+  margin-left: 5px;
+}
+
+/* mobile */
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .rot-reg {
+    display: flex;
+    margin-top: 20px;
+    font-size: 0.8rem;
+  }
+}
