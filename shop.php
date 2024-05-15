@@ -206,7 +206,7 @@
 
                     </div>
                     <!-- <a class="btn btn-dark" href="#" id="buy-item-1" onclick="buyRank('staff')"></a> -->
-                    <button class="btn btn-dark" type="button" onclick="buyRank('copper')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyRank('copper')">Mua Xu</button>
                 </div>
 
                 <div class="card">
@@ -233,7 +233,7 @@
 
                     </div>
 
-                    <a class="btn btn-dark" href="#" id="buy-item-2">100 Xu</a>
+                    <a class="btn btn-dark" href="#" id="buy-item-2">Mua</a>
                 </div>
 
                 <div class="card">
@@ -260,7 +260,7 @@
 
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyRank('gold')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyRank('gold')">Mua</button>
                 </div>
 
                 <div class="card card-cosmetics">
@@ -288,7 +288,7 @@
 
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyRank('staff')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyRank('staff')">Mua</button>
 
                 </div>
             </div>
@@ -311,7 +311,7 @@
 
                     </div>
                     <!-- <a class="btn btn-dark" href="#" id="buy-item-1" onclick="buyRank('staff')"></a> -->
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">Mua</button>
                 </div>
 
                 <div class="card">
@@ -324,7 +324,7 @@
 
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">Mua</button>
                 </div>
 
                 <div class="card">
@@ -337,7 +337,7 @@
 
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">Mua</button>
                 </div>
 
                 <div class="card card-cosmetics">
@@ -349,7 +349,7 @@
                         <p>Thú cưỡi: <i class="fa-solid fa-x"></i></p>
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">Mua</button>
 
                 </div>
             </div>
@@ -363,7 +363,7 @@
                         <p>Thú cưỡi: <i class="fa-solid fa-x"></i></p>
                     </div>
                     <!-- <a class="btn btn-dark" href="#" id="buy-item-1" onclick="buyRank('staff')"></a> -->
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">Mua</button>
                 </div>
 
                 <div class="card">
@@ -376,7 +376,7 @@
 
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">Mua</button>
                 </div>
 
                 <div class="card">
@@ -389,7 +389,7 @@
 
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">Mua</button>
                 </div>
 
                 <div class="card card-cosmetics">
@@ -401,7 +401,7 @@
                         <p>Thú cưỡi: <i class="fa-solid fa-x"></i></p>
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">Mua</button>
 
                 </div>
             </div>
@@ -415,7 +415,7 @@
                         <p>Thú cưỡi: <i class="fa-solid fa-x"></i></p>
                     </div>
                     <!-- <a class="btn btn-dark" href="#" id="buy-item-1" onclick="buyRank('staff')"></a> -->
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">Mua</button>
                 </div>
 
                 <div class="card">
@@ -428,7 +428,7 @@
 
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">Mua</button>
                 </div>
 
                 <div class="card">
@@ -441,7 +441,7 @@
 
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">Mua</button>
                 </div>
 
                 <div class="card card-cosmetics">
@@ -453,7 +453,7 @@
                         <p>Thú cưỡi: <i class="fa-solid fa-check"></i></p>
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">Mua</button>
 
                 </div>
             </div>
@@ -469,7 +469,7 @@
 
                     </div>
                     <!-- <a class="btn btn-dark" href="#" id="buy-item-1" onclick="buyRank('staff')"></a> -->
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">Mua</button>
                 </div>
 
                 <div class="card">
@@ -482,7 +482,7 @@
 
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">Mua</button>
                 </div>
 
                 <div class="card">
@@ -495,7 +495,7 @@
 
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet1')">Mua</button>
                 </div>
 
                 <div class="card card-cosmetics">
@@ -507,7 +507,7 @@
                         <p>Thú cưỡi: <i class="fa-solid fa-check"></i> (có thể bay)</p>
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">Mua</button>
 
                 </div>
             </div>
@@ -522,7 +522,7 @@
                         <p>Thú cưỡi: <i class="fa-solid fa-check"></i> (có thể bay)</p>
                     </div>
 
-                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">50 Xu</button>
+                    <button class="btn btn-dark" type="button" onclick="buyPet('pet2')">Mua</button>
 
                 </div>
             </div>
