@@ -12,6 +12,12 @@
   <title>Adventure Craft - Nạp thẻ!</title>
   <link rel="shortcut icon" href="../asset/IMG/logo.jpeg" type="image/x-icon" />
   <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        checkLogin();
+        checkPoint("point");
+    });
+    </script>
 </head>
 <body onload="QRCode()">
   
@@ -24,8 +30,8 @@
     <li>
       <a href="../index.php">Trang chủ</a>
     </li>
-    <li><p class="name">AnTrc2</p></li>
-    <li> <span class="point">100</span><i class="fa-solid fa-money-bill"></i></li>
+    <li><p class="name"></p></li>
+    <li> <span class="point"></span><i class="fa-solid fa-money-bill"></i></li>
 
     <li><a href="../shop.php">Shop</a></li>
     <li><a href="../login.php" class="log-in">Đăng nhập</a></li>
@@ -77,7 +83,7 @@
             <div class="navbars-title flex">
                 <div class="name-user">
                     <P class="name"></P>
-                    <span class="point"><i class="fa-solid fa-money-bill"></i></span>
+                    <span class="point"></span><i class="fa-solid fa-money-bill"></i>
                 </div>
                 
             </div>
