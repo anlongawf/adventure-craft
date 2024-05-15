@@ -1,0 +1,341 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* img menu pc */
+@media only screen and (min-width: 1000px) and (max-width: 1920px) {
+  .menu img {
+    display: none;
+  }
+}
+
+/* Body Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  background-color: rgb(55, 63, 71);
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 85%;
+  float: right;
+  padding-right: 3%;
+}
+
+/* Navigation Styles */
+.nav-bar {
+  background-color: rgb(27, 28, 32);
+  float: left;
+  height: 100vh;
+  width: 15%;
+}
+
+.nav-bar ul {
+  margin-top: 2rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-bar ul li a {
+  display: inline-block;
+  color: rgb(182, 182, 182);
+  padding: 10px 20px;
+}
+
+.nav-bar ul li a:hover {
+  color: white;
+}
+
+.logo {
+  position: relative;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.133);
+}
+
+.content {
+  padding-left: 3rem;
+  margin-top: 3rem;
+}
+
+.content .title {
+  position: relative;
+  font-size: 3rem;
+  color: #b6b6b6;
+}
+
+.content .title::after {
+  content: '';
+  position: absolute;
+  bottom: -2.2rem;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.133);
+  margin-bottom: 2rem;
+}
+.content .sub-title {
+  position: relative;
+  margin-top: 3rem;
+  font-size: 20px;
+  color: #f7f7f7;
+}
+.content .sub-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.133);
+}
+.content .text-content {
+  margin-top: 1rem;
+  color: rgb(206, 198, 206);
+}
+
+/* MOBILE */
+@media only screen and (min-width: 320px) and (max-width: 999px) {
+  .menu img {
+    position: relative;
+    width: 40px;
+    top: 0.4rem;
+  }
+  /* Thêm CSS cho nút mở menu */
+  .open-menu {
+    display: inline;
+  }
+
+  /* Ẩn nút đóng menu ban đầu */
+  .close-menu {
+    display: none;
+  }
+
+  /* Ẩn menu ban đầu */
+  .nav-bar ul {
+    display: none;
+  }
+
+  /* Reset CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Body Styles */
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    background-color: rgb(55, 63, 71);
+    color: #333;
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .container {
+    max-width: 100%; /* Đảm bảo rằng nội dung sẽ không bị tràn ra ngoài khung */
+    padding: 0 20px; /* Thêm padding để tách nội dung khỏi mép */
+  }
+
+  /* Navigation Styles */
+  .nav-bar {
+    background-color: rgb(30 31 35);
+    height: auto; /* Thay vì chiều cao cố định, sử dụng chiều cao tự động */
+    width: 100%; /* Sẽ chiếm toàn bộ chiều rộng trên điện thoại */
+  }
+
+  .nav-bar ul {
+    list-style-type: none;
+    padding: 20px 0; /* Thêm padding để tạo khoảng cách từ trên xuống */
+    text-align: center; /* Căn giữa các mục trên điện thoại */
+  }
+
+  .nav-bar ul li {
+    margin-bottom: 10px; /* Khoảng cách giữa các mục */
+  }
+
+  .nav-bar ul li a {
+    display: inline-block;
+    color: rgb(182, 182, 182);
+    padding: 10px 0; /* Giảm padding dọc để tạo cảm giác mở rộng */
+    width: 100%; /* Đảm bảo rằng mỗi mục chiếm toàn bộ chiều rộng */
+  }
+
+  .nav-bar ul li a:hover {
+    color: white;
+  }
+
+  .logo {
+    display: none;
+  }
+  .content {
+    padding: 20px 0; /* Thêm padding cho phần nội dung */
+  }
+
+  .content .title {
+    font-size: 2rem; /* Giảm kích thước tiêu đề cho phù hợp */
+    color: #b6b6b6;
+  }
+
+  .content .sub-title {
+    margin-top: 1.5rem; /* Khoảng cách giữa tiêu đề và nội dung */
+    font-size: 1.5rem; /* Giảm kích thước tiêu đề con */
+    color: #f7f7f7;
+  }
+
+  .content .text-content {
+    margin-top: 1rem;
+    color: rgb(206, 198, 206);
+  }
+}
