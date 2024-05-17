@@ -33,7 +33,129 @@ var shop = {
             canFly: false,
             price: 60,
             permission: "pet.creeper"
-        }
+        },
+        {
+            srcImage: "asset/IMG/Warrior.png",
+            realName: "warrior",
+            namePet: "Warrior",
+            skinAmount: 0,
+            canRide: false,
+            canFly: false,
+            price: 35,
+            permission: "pet.warrior"
+        },
+        {
+            srcImage: "asset/IMG/DarkKnight.png",
+            realName: "darkKnight",
+            namePet: "Dark Knight",
+            skinAmount: 0,
+            canRide: false,
+            canFly: false,
+            price: 35,
+            permission: "pet.darkKnight"
+        },
+        {
+            srcImage: "asset/IMG/Paladin.png",
+            realName: "paladin",
+            namePet: "Paladin",
+            skinAmount: 0,
+            canRide: false,
+            canFly: false,
+            price: 35,
+            permission: "pet.paladin"
+        },
+        {
+            srcImage: "asset/IMG/DragonWarrior.png",
+            realName: "dragonWarrior",
+            namePet: "Dragon Warrior",
+            skinAmount: 0,
+            canRide: false,
+            canFly: false,
+            price: 35,
+            permission: "pet.dragonWarrior"
+        },
+        {
+            srcImage: "asset/IMG/MartialArtist.png",
+            realName: "martialArtist",
+            namePet: "Martial Artist",
+            skinAmount: 0,
+            canRide: false,
+            canFly: false,
+            price: 35,
+            permission: "pet.martialArtist"
+        },
+        {
+            srcImage: "asset/IMG/NinjaSamurai.png",
+            realName: "ninjaSamurai",
+            namePet: "Ninja Samurai",
+            skinAmount: 0,
+            canRide: false,
+            canFly: false,
+            price: 35,
+            permission: "pet.ninjaSamurai"
+        },
+        {
+            srcImage: "asset/IMG/Reaper.png",
+            realName: "reaper",
+            namePet: "Reaper",
+            skinAmount: 0,
+            canRide: false,
+            canFly: false,
+            price: 35,
+            permission: "pet.reaper"
+        },
+        {
+            srcImage: "asset/IMG/Pegasus.png",
+            realName: "pegasus",
+            namePet: "Pegasus",
+            skinAmount: 0,
+            canRide: true,
+            canFly: true,
+            price: 150,
+            permission: "pet.pegasus"
+        },
+        {
+            srcImage: "asset/IMG/SpatanHorse.png",
+            realName: "spatanHorse",
+            namePet: "SpatanHorse",
+            skinAmount: 4,
+            canRide: true,
+            canFly: false,
+            price: 89,
+            permission: "pet.spatanHorse"
+        },
+        {
+            srcImage: "asset/IMG/Kitsune.png",
+            realName: "kitsune",
+            namePet: "Kitsune",
+            skinAmount: 3,
+            canRide: true,
+            canFly: true,
+            price: 179,
+            permission: "pet.kitsune"
+        },
+        {
+            srcImage: "asset/IMG/Ghostfantom.png",
+            realName: "ghostfantom",
+            namePet: "Ghostfantom",
+            skinAmount: 3,
+            canRide: true,
+            canFly: true,
+            price: 179,
+            permission: "pet.ghostfantom"
+        },
+        {
+            srcImage: "asset/IMG/Phoenix.png",
+            realName: "phoenix",
+            namePet: "Phoenix",
+            skinAmount: 4,
+            canRide: true,
+            canFly: true,
+            price: 189,
+            permission: "pet.phoenix"
+        },
+        
+        
     ]
 };
 document.addEventListener('DOMContentLoaded', function () {
@@ -43,8 +165,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const card = document.createElement('div');
         card.className = 'card';
 
-        const Fly = shop.pet[i].canFly ? '<i class="fa-solid fa-x"></i>' : '<i class="fa-solid fa-check"></i>';
-        const Ride = shop.pet[i].canRide ? '<i class="fa-solid fa-x"></i>' : '<i class="fa-solid fa-check"></i>';
+        const Fly = shop.pet[i].canFly ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-x"></i>';
+        const Ride = shop.pet[i].canRide ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-x"></i>';
         const cardHTML = `
             <img src="${shop.pet[i].srcImage}" alt="">
             <div class="card-content">
