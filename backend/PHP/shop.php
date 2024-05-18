@@ -2,7 +2,7 @@
     session_start();
     function sendDiscordMessage($message) {
 		// Discord Webhook URL
-		$webhook_url = 'https://discord.com/api/webhooks/1222553457223925862/xLgO86ooj08u8b90eG0-IcAFWkxPU63pJw6Ktlrnth75KySsKVWrCvG_QhyYhdMGTYPI';
+		$webhook_url = 'https://discord.com/api/webhooks/1241390234701135963/X3aKvOMZzvcsc7h_wJ_5o5lfnR5u7aN3QMNZPuTgyuSV_s21x0CKv1WDSphxqZu_DEKJ';
 	
 		// Message data
 		$data = array(
