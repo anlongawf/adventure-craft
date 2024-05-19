@@ -1,8 +1,10 @@
 <?php
     session_start();
-    function sendDiscordMessage($message) {
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
+    $discordWebhook = ["console" =>"https://discord.com/api/webhooks/1241391313878913024/09dsPMRgXCokKh69J7Ulblu3772m5FKiqKD4aS5iwpesJPdRfQddhBq7ObW1uUPkXshW","shopLog"=>"https://discord.com/api/webhooks/1241390234701135963/X3aKvOMZzvcsc7h_wJ_5o5lfnR5u7aN3QMNZPuTgyuSV_s21x0CKv1WDSphxqZu_DEKJ"];
+    function sendDiscordMessage($webhook,$message) {
 		// Discord Webhook URL
-		$webhook_url = 'https://discord.com/api/webhooks/1222553457223925862/xLgO86ooj08u8b90eG0-IcAFWkxPU63pJw6Ktlrnth75KySsKVWrCvG_QhyYhdMGTYPI';
+		$webhook_url = $webhook;
 	
 		// Message data
 		$data = array(
@@ -41,12 +43,14 @@
 		// Return the response from Discord (if needed)
 		return $response;
 	}
+    
     function sql($command){
         $connection = new PDO("mysql:host=localhost;dbname=playerpoints","root","Sqrtfl0@t01");
         $data = $connection->query($command)->fetch();
         return $data;
         // "SELECT points FROM playerpoints_points INNER JOIN playerpoints_username_cache ON playerpoints_points.uuid = playerpoints_username_cache.uuid WHERE playerpoints_username_cache.username = '".$_SESSION["taiKhoan"]."'"
     }
+    // sendDiscordMessage($discordWebhook["shopLog"],date('d/m/Y H:i:s')." » **AnTrc2** đã mua rank **Gold** thành công");
     if (isset($_POST["buyRank"])) {
         $username = $_SESSION["taiKhoan"];
         $rank = $_POST["rank"];
@@ -58,7 +62,7 @@
         // $connection->query("INSERT INTO your_table_name (rank, price, time, donViThoiGian) VALUES ('$rank', '$price', '$time', '$donViThoiGian')");
         
         // Trả về thông báo hoặc kết quả cần thiết
-
+        
 
 
 
@@ -69,13 +73,15 @@
             echo $_SESSION["taiKhoan"]." đã mua rank $rank thành công!";
         
         // console("playerpoints:p take ".$username." ".$price);
-            sendDiscordMessage("playerpoints:p take ".$username." ".$price);
+            sendDiscordMessage($discordWebhook["console"],"playerpoints:p take ".$username." ".$price);
+            sendDiscordMessage($discordWebhook["shopLog"],date('d/m/Y H:i:s')." » **$username** đã mua rank **$rank** thành công");
             $rank = "default";
-            sendDiscordMessage("luckperms:lp user ".$username." parent set ".$rank);
+            sendDiscordMessage($discordWebhook["console"],"luckperms:lp user ".$username." parent set ".$rank);
         } else {
             echo $_SESSION["taiKhoan"]." đã mua rank $rank thành công!";
-            sendDiscordMessage("playerpoints:p take ".$username." ".$price);
-            sendDiscordMessage("luckperms:lp user ".$username." parent set ".$rank);
+            sendDiscordMessage($discordWebhook["console"],"playerpoints:p take ".$username." ".$price);
+            sendDiscordMessage($discordWebhook["shopLog"],date('d/m/Y H:i:s')." » **$username** đã mua rank **$rank** thành công");
+            sendDiscordMessage($discordWebhook["console"],"luckperms:lp user ".$username." parent set ".$rank);
         }
         
     }
@@ -84,8 +90,8 @@
         $pet = $_POST["pet"];
         $price = $_POST["price"];
         echo "success";
-        sendDiscordMessage("playerpoints:p take ".$username." ".$price);
-        sendDiscordMessage("luckperms:lp user ".$username." parent set ".$pet);
+        sendDiscordMessage($discordWebhook["console"],"playerpoints:p take ".$username." ".$price);
+        sendDiscordMessage($discordWebhook["console"],"luckperms:lp user ".$username." parent set ".$pet);
     }
     // if (isset($_POST["login"]) && isset($_SESSION["taiKhoan"])){
     //     echo "true";

@@ -1,5 +1,14 @@
 @import url(../Components/Palette.css);
 
+.fa-check {
+  color: green;
+  font-size: 22px;
+}
+.fa-x {
+  color: red;
+  font-size: 22px;
+}
+
 .main h1 {
   margin: 0;
   font-size: 60px !important;
