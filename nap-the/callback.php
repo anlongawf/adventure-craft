@@ -1,7 +1,8 @@
 <?php
-function sendDiscordMessage($message) {
+$discord = ["console"=>"https://discord.com/api/webhooks/1241391313878913024/09dsPMRgXCokKh69J7Ulblu3772m5FKiqKD4aS5iwpesJPdRfQddhBq7ObW1uUPkXshW","donateLog"=>"https://discord.com/api/webhooks/1242149951719604285/ksVjOgmxLJK2z-Zl0bXeKvcCFp3qwABgOXYAX0kJIfbaPmSXNgX8iDgtq6CKsh7NEzi1"];
+function sendDiscordMessage($webhook,$message) {
 	// Discord Webhook URL
-	$webhook_url = 'https://discord.com/api/webhooks/1241391313878913024/09dsPMRgXCokKh69J7Ulblu3772m5FKiqKD4aS5iwpesJPdRfQddhBq7ObW1uUPkXshW';
+	$webhook_url = $webhook;
 
 	// Message data
 	$data = array(
@@ -55,9 +56,8 @@ function sendDiscordMessage($message) {
 		
 		if ($status == "thanhcong"){
 			$username = explode("_",$content)[0];
-			sendDiscordMessage("playerpoints:p give ".$username." ".(intval($amount)/1000));
-		} else {
-			sendDiscordMessage("thatBai");
+			sendDiscordMessage($discord['console'],"playerpoints:p give ".$username." ".(intval($amount)/1000));
+			sendDiscordMessage($discord["donateLog"],"$username đã ủng hộ máy chủ ".(intval($amount)/1000)."k");
 		}
 // if ($result->num_rows > 0){
 //     $result = $result->fetch_array(MYSQLI_ASSOC);
