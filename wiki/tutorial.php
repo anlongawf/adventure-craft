@@ -46,7 +46,7 @@
       </a>
       <ul>
         <li>
-          <a href="wiki.html">Giới thiệu</a>
+          <a href="introduction.html">Giới thiệu</a>
         </li>
         <li>
           <a href="howplay.html">Cách tham gia</a>
@@ -66,29 +66,33 @@
     <div class="container">
       <div class="content">
         <h2 class="title">Chào mừng bạn đến Wiki Adventure Craft</h2>
-        <h3 class="sub-title">Gioi thieu</h3>
+        <h3 class="sub-title">Các lệnh cơ bản:</h3>
         <p class="text-content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam
-          odio neque est facere aperiam amet odit aut, dicta, asperiores
-          repellendus commodi dolor? Tempora nihil dicta reprehenderit quibusdam
-          facere voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Eum ipsam odio neque est facere aperiam amet odit aut, dicta,
-          asperiores repellendus commodi dolor? Tempora nihil dicta
-          reprehenderit quibusdam facere voluptatem. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Eum ipsam odio neque est facere aperiam
-          amet odit aut, dicta, asperiores repellendus commodi dolor? Tempora
-          nihil dicta reprehenderit quibusdam facere voluptatem. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Eum ipsam odio neque est
-          facere aperiam amet odit aut, dicta, asperiores repellendus commodi
-          dolor? Tempora nihil dicta reprehenderit quibusdam facere voluptatem.
+          /class để có thể chọn nghề<br />
+          /shop để mua vật phẩm<br />
+          /sellgui để bán vật phẩm<br />
+          /afk - Đặt trạng thái người chơi là "Away From Keyboard" (AFK).<br />
+          /back - Dịch chuyển người chơi về vị trí trước đó (thường là vị trí
+          khi chết hoặc khi dịch chuyển trước đó).<br />
+          /delhome [name] - Xóa một điểm về nhà đã đặt.<br />
+          /home [name] - Dịch chuyển đến điểm về nhà đã đặt.<br />
+          /pay &lt;player&gt; &lt;amount&gt; - Chuyển tiền cho một người chơi
+          khác.<br />
+          /sethome [name] - Đặt một điểm về nhà.<br />
+          /spawn - Dịch chuyển đến điểm xuất hiện của máy chủ.<br />
+          /tpa &lt;player&gt; - Yêu cầu dịch chuyển đến một người chơi.<br />
+          /tpaccept - Chấp nhận yêu cầu dịch chuyển.<br />
+          /tpdeny - Từ chối yêu cầu dịch chuyển.<br />
+          /warp &lt;warpname&gt; - Dịch chuyển đến một điểm warp đã đặt.<br />
+          /claim để có vùng đất riêng của mình, cần xẻng vàng.<br />
+          Video hướng dẫn:
+          <a
+            href="https://www.facebook.com/anphanhunter/videos/375466911621773?idorvanity=868891888365976"
+            style="color: rgb(72, 86, 176)"
+            >https://www.facebook.com/anphanhunter/videos/375466911621773?idorvanity=868891888365976</a
+          >
         </p>
-        <h3 class="sub-title">Gioi thieu</h3>
-        <p class="text-content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam
-          odio neque est facere aperiam amet odit aut, dicta, asperiores
-          repellendus commodi dolor? Tempora nihil dicta reprehenderit quibusdam
-          facere voluptatem.
-        </p>
+        <p></p>
       </div>
     </div>
     <script>
