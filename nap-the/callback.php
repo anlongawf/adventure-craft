@@ -40,10 +40,10 @@ function sendDiscordMessage($message) {
 	// Return the response from Discord (if needed)
 	return $response;
 }
+// sendDiscordMessage("a");
 // include(__DIR__ ."/api/config.php");
 	$validate = ValidateCallback($_POST);
 	if($validate != false) { //Nếu xác thực callback đúng thì chạy vào đây.
-		echo "a";
 		$status = $validate['status']; //Trạng thái thẻ nạp, thẻ thành công = thanhcong , Thẻ sai, thẻ sai mệnh giá = thatbai
 		$serial = $validate['serial']; //Số serial của thẻ.
 		$pin = $validate['pin']; //Mã pin của thẻ.
@@ -52,8 +52,12 @@ function sendDiscordMessage($message) {
 		$real_amount = $validate['real_amount']; // thực nhận đã trừ chiết khấu
 		$content = $validate['content']; // id transaction 
 		// $result = $conn->query("SELECT * FROM `trans_log` WHERE status = 0 AND trans_id = '{$content}' AND pin = '{$pin}' AND seri = '{$serial}' AND type = '{$card_type}'");
+		
 		if ($status == "thanhcong"){
+			$username = explode("_",$content)[0];
 			sendDiscordMessage("playerpoints:p give ".$username." ".(intval($amount)/1000));
+		} else {
+			sendDiscordMessage("thatBai");
 		}
 // if ($result->num_rows > 0){
 //     $result = $result->fetch_array(MYSQLI_ASSOC);
