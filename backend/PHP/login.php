@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $connection = new PDO("mysql:host=127.0.0.1;dbname=authme", "root", "Sqrtfl0@t01");
+    $connection = new PDO("mysql:host=127.0.0.1;dbname=authme", "root", "");
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if (isset($_POST["username"],$_POST["password"])){
         $username = $_POST["username"];
