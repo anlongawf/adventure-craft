@@ -68,7 +68,7 @@
         <span class="open-menu"><i class="fa-solid fa-bars"></i>Menu</span>
         <ul>
             <li><a href="nap-the/">Nạp thẻ</a></li>
-            <li><a href="shop.php">Shop</a></li>
+            <li><a href="shop.php/">Shop</a></li>
             <li><a href="login.php" class="log-in">Đăng nhập</a></li>
             <li><a href="sign-up.php" class="register">Đăng ký</a></li>
             <li><a href="logout.php" class="log-out">Đăng xuất</a></li>
