@@ -16,6 +16,7 @@
       href="asset/fonts/fontawesome-free-6.5.2-web/css/all.css"
     />
     <link rel="shortcut icon" href="asset/IMG/logo.jpeg" type="image/x-icon" />
+    <script src="backend/JS/sign-up.js"></script>
     <title>Adventure Craft - Đăng kí!</title>
 </head>
 <body>
@@ -30,12 +31,12 @@
             </div>
             <div>
                 <label for="">Mật khẩu</label>
-                <input type="text" id="password" name="matKhau">
+                <input type="password" id="password" name="matKhau">
                 <div class="error" id="passwordError"></div>
             </div>
             <div>
                 <label for="">Nhập lại mật khẩu</label>
-                <input type="text" id="rePassword" name="nhapLaiMatKhau">
+                <input type="password" id="rePassword" name="nhapLaiMatKhau">
                 <div class="error" id="rePasswordError"></div>
             </div>
             <button class="reg" style="color: black">Đăng kí</button>

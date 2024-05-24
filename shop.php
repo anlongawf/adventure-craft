@@ -181,117 +181,7 @@
                 <h1 class="m-mobile-title">Shop Rank</h1>
             </div>
 
-            <div class="cards">
-                <div class="card">
-                    <img src="asset/IMG/copper-rank.svg" alt="Copper VIP Illustration">
-
-                    <div class="card-content">
-                        <h2>Copper VIP</h2>
-                        <p>Thời gian: 30 ngày</p>
-                        <h3>Quyền lợi:</h3>
-                        <ul class="pms">
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                        </ul>
-
-                    </div>
-                    <!-- <a class="btn btn-dark" href="#" id="buy-item-1" onclick="buyRank('staff')"></a> -->
-                    <button class="btn btn-dark" type="button" onclick="buyRank('copper')">Mua Xu</button>
-                </div>
-
-                <div class="card">
-                    <img src="asset/IMG/gold-rank.svg" alt="Image of Gold VIP">
-
-                    <div class="card-content">
-                        <h2>Gold VIP</h2>
-                        <p>Thời gian: 30 ngày</p>
-                        <h3>Quyền lợi:</h3>
-                        <ul class="pms">
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <a class="btn btn-dark" href="#" id="buy-item-2">Mua</a>
-                </div>
-
-                <div class="card">
-                    <img src="asset/IMG/diamind-rank.svg" alt="Image of Diamond VIP">
-
-                    <div class="card-content">
-                        <h2>Diamond VIP</h2>
-                        <p>Thời gian: 30 ngày</p>
-                        <h3>Quyền lợi:</h3>
-                        <ul class="pms">
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <button class="btn btn-dark" type="button" onclick="buyRank('gold')">Mua</button>
-                </div>
-
-                <div class="card card-cosmetics">
-                    <img src="asset/IMG/nether-rank.svg" alt="Image of cosmetics">
-
-                    <div class="card-content">
-                        <h2>Netherite</h2>
-                        <p>Thời gian: 30 ngày</p>
-                        <h3>Quyền lợi:</h3>
-                        <ul class="pms">
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                            <li>
-                                <p class="desc"></p>
-                            </li>
-                        </ul>
-
-
-                    </div>
-
-                    <button class="btn btn-dark" type="button" onclick="buyRank('staff')">Mua</button>
-
-                </div>
-            </div>
+            <div class="cards" id="rank"></div>
 
             <!-- shop pet -->
             <div class="main-title flex">
@@ -299,7 +189,7 @@
                 <h1 class="m-desktop-title">Shop Pet</h1>
                 <h1 class="m-mobile-title">Shop Pet</h1>
             </div>
-            <div class="cards" id="cardss"></div>
+            <div class="cards" id="pet"></div>
             
         </div>
     </main>

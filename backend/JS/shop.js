@@ -1,16 +1,30 @@
 var shop = {
     rank: [
-        {
-            name: "Copper",
-            price: 120,
-            time: 30,
-            donViThoiGian: "d"
+        dirt = {
+            nameRank: "Đất",
+            group: "dirt",
+            price: 1999950,
+            imageRank: "",
+            thoiGian: 30,
+            type: "d", // days
+            quyenLoi: [
+                "Được sử dụng /fly",
+                "Được sử dụng /home"
+            ]
         },
         {
-            name: "Gold",
+            nameRank: "Đồng",
+            group: "copper",
             price: 150,
-            time: 30,
-            donViThoiGian: "d"
+            thoiGian: 30,
+            type: "d",
+            quyenLoi: [
+                "Được sử dụng /gamemode c",
+                "Được sử dụng /pv 5",
+                "Được sử dụng đến chết",
+                "Quyền lợi tiếp",
+                "Quyền lợi tiếp",
+            ]
         }
     ],
     pet: [
@@ -159,15 +173,42 @@ var shop = {
     ]
 };
 document.addEventListener('DOMContentLoaded', function () {
-    const cardContainer = document.getElementById('cardss');
+    var rank = document.getElementById("rank");
+    for (let i =0;i<shop.rank.length;i++){
+        var card = document.createElement("div");
+        card.className = "card";
+        var cacQuyenLoi = "";
+        for (let j =0;j<shop.rank[i].quyenLoi.length;j++){
+            cacQuyenLoi += '<li><p class="desc">'+shop.rank[i].quyenLoi[j]+'</p></li>'
+        
+            
+        }
+        cardHTML = `
+            <img src="${shop.rank[i].imageRank}" alt="Ảnh của rank ${shop.rank[i].nameRank}">
+
+            <div class="card-content">
+                <h2>${shop.rank[i].nameRank}</h2>
+                <p>Thời gian: ${shop.rank[i].thoiGian} ngày</p>
+                <h3>Quyền lợi:</h3>
+                <ul class="pms">
+                    ${cacQuyenLoi}
+                </ul>
+                </div>
+                    <button class="btn btn-dark" type="button" onclick="buyRank('${shop.rank[i].group}')">Mua rank ${shop.rank[i].nameRank}</button>
+                `
+        card.innerHTML = cardHTML;
+        rank.appendChild(card);
+    }
+
+    var pet = document.getElementById('pet');
 
     for (let i = 0; i < shop.pet.length; i++) {
-        const card = document.createElement('div');
+        var card = document.createElement('div');
         card.className = 'card';
 
-        const Fly = shop.pet[i].canFly ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-x"></i>';
-        const Ride = shop.pet[i].canRide ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-x"></i>';
-        const cardHTML = `
+        var Fly = shop.pet[i].canFly ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-x"></i>';
+        var Ride = shop.pet[i].canRide ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-x"></i>';
+        var cardHTML = `
             <img src="${shop.pet[i].srcImage}" alt="">
             <div class="card-content">
                 <h2>${shop.pet[i].namePet}</h2>
@@ -181,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
 
         card.innerHTML = cardHTML;
-        cardContainer.appendChild(card);
+        pet.appendChild(card);
     }
 });
 function sendData(url, method, data, callback) {
@@ -212,11 +253,18 @@ function sendData(url, method, data, callback) {
 // });
 // Bây giờ, bạn có thể sử dụng giá trị của responseData ở đây sau khi request hoàn thành
 function buyRank(item) {
+    var viTri =0;
+    for (let i =0;i<shop.rank.length;i++){
+        if (shop.rank[i].group === item){
+            viTri = i;
+            break;
+        }
+    }
     sendData('backend/PHP/check-point.php', 'POST', 'data_here', function(error, response) {
         if (error) {
             console.error('Đã xảy ra lỗi:', error);
         } else {
-            priceRank = shop.rank[item].price;
+            priceRank = shop.rank[viTri].price;
             if (response>=priceRank){
                 check = confirm("Bạn có chắc chắn muốn mua rank "+item+" không?")
                 if (check){

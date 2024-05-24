@@ -67,7 +67,7 @@ function valFormSignUp(){
         return false;
     } else {
         data = `username=${username}&password=${password}`
-        sendHttpRequest("backend/PHP/sign-up.js","POST",data, function(response){
+        sendHttpRequest("backend/PHP/sign-up.php","POST",data, function(response){
             if (response === "Success"){
                 window.location.href = "index.php";
             } else {
