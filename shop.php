@@ -186,7 +186,9 @@
             <div class="cards" id="rank"></div>
 
             <div class="cards">
-                <button>a</button>
+                <div class="card">
+                    <button>a</button>
+                </div>
             </div>
 
 
