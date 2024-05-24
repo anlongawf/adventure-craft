@@ -15,8 +15,8 @@ var shop = {
       ],
     },
     {
-      nameRank: 'Đồng',
-      group: 'copper',
+      nameRank: 'Vàng',
+      group: 'gold',
       price: 150,
       thoiGian: 30,
       type: 'd',
@@ -172,6 +172,20 @@ var shop = {
     },
   ],
 };
+function showRank(i) {
+  let overlay = document.getElementById(`${i}-overlay`);
+  console.log(overlay);
+  let rankInfo = document.getElementById(`${i}-rankInfo`);
+  overlay.style.display = "block";
+  rankInfo.style.display = "block"; // Hiển thị rankInfo
+}
+
+function hideRank(i) {
+  let overlay = document.getElementById(`${i}-overlay`);
+  let rankInfo = document.getElementById(`${i}-rankInfo`);
+  overlay.style.display = "none";
+  rankInfo.style.display = "none";
+}
 document.addEventListener('DOMContentLoaded', function () {
   var rank = document.getElementById('rank');
   for (let i = 0; i < shop.rank.length; i++) {
@@ -182,24 +196,27 @@ document.addEventListener('DOMContentLoaded', function () {
       cacQuyenLoi +=
         '<li><p class="desc">' + shop.rank[i].quyenLoi[j] + '</p></li>';
     }
+    
     cardHTML = `
           <img src="${shop.rank[i].imageRank}" alt="Ảnh của rank ${shop.rank[i].nameRank}">
 
           <div class="card-content">
     <h2>${shop.rank[i].nameRank}</h2>
     <p>Thời gian: ${shop.rank[i].thoiGian} ngày</p>
-    <div id="overlay" class="overlay"></div>
-    <ul id="rankInfo" class="rankInfo">
+    <div id="${shop.rank[i].group}-overlay" class="overlay"></div>
+    <ul id="${shop.rank[i].group}-rankInfo" class="rankInfo">
         ${cacQuyenLoi}
-        <button type="button" onclick="hideRank()" class="closeBtn">Đóng</button>
+        <button type="button" onclick="hideRank('${shop.rank[i].group}')" class="closeBtn">Đóng</button>
     </ul>
 </div>
-<button class="btn btn-more" type="button" onclick="showRank()">Xem thêm</button>
+<button class="btn btn-more" type="button" onclick="showRank('${shop.rank[i].group}')">Xem thêm</button>
 <button class="btn btn-dark" type="button" onclick="buyRank('${shop.rank[i].group}')">Mua rank ${shop.rank[i].nameRank}</button>
 
               `;
+    
     card.innerHTML = cardHTML;
     rank.appendChild(card);
+    hideRank(`${shop.rank[i].group}`);
   }
 
   var pet = document.getElementById('pet');

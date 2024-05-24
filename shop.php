@@ -241,18 +241,18 @@
 </body>
 
 </html>
-<script>
-function showRank() {
-    var overlay = document.getElementById("overlay");
-    var rankInfo = document.getElementById("rankInfo");
+<!-- <script>
+function showRank(i) {
+    var overlay = document.getElementById(`${i}-overlay`);
+    var rankInfo = document.getElementById(`${i}-rankInfo`);
     overlay.style.display = "block";
     rankInfo.style.display = "block"; // Hiển thị rankInfo
 }
 
-function hideRank() {
-    var overlay = document.getElementById("overlay");
-    var rankInfo = document.getElementById("rankInfo");
+function hideRank(i) {
+    var overlay = document.getElementById(`${i}-overlay`);
+    var rankInfo = document.getElementById(`${i}-rankInfo`);
     overlay.style.display = "none";
     rankInfo.style.display = "none";
 }
-</script>
+</script> -->
