@@ -141,34 +141,12 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 998;
-}
-
-#rankInfo {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  z-index: 999;
-}
-
-#overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 998;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 #rankInfo {
+  position: relative;
   display: none;
   position: fixed;
   top: 50%;
@@ -183,8 +161,11 @@
   height: 50%;
 }
 #rankInfo li {
-  list-style-type: none; /* Ẩn dấu đầu dòng */
-  padding: 10px; /* Khoảng cách giữa mỗi mục */
+  font-family: 'Roboto', sans-serif;
+  margin-top: 20px;
+  list-style-type: none;
+  text-align: center;
+  color: #333;
 }
 
 #overlay.active {
@@ -195,4 +176,10 @@
 #rankInfo.active {
   display: block;
   transform: translate(-50%, -50%) scale(1);
+}
+
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
 }

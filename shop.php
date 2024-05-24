@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="asset/CSS/shop/shop.css">
     <link rel="stylesheet" href="asset/CSS/shop/Framework.css">
     <link rel="stylesheet" href="asset/fonts/fontawesome-free-6.5.2-web/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+
 
     <title>Adventure Craft - Shop</title>
     <script src="backend/JS/shop.js"></script>
