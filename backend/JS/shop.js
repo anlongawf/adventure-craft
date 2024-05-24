@@ -1,14 +1,19 @@
 var shop = {
   rank: [
-    (dirt = {
-      nameRank: 'Đất',
-      group: 'dirt',
-      price: 1999950,
-      imageRank: '',
+    {
+      nameRank: 'Đồng',
+      group: 'copper',
+      price: 150,
       thoiGian: 30,
-      type: 'd', // days
-      quyenLoi: ['Được sử dụng /fly', 'Được sử dụng /home'],
-    }),
+      type: 'd',
+      quyenLoi: [
+        'Được sử dụng /gamemode c',
+        'Được sử dụng /pv 5',
+        'Được sử dụng đến chết',
+        'Quyền lợi tiếp',
+        'Quyền lợi tiếp',
+      ],
+    },
     {
       nameRank: 'Đồng',
       group: 'copper',
@@ -181,18 +186,17 @@ document.addEventListener('DOMContentLoaded', function () {
           <img src="${shop.rank[i].imageRank}" alt="Ảnh của rank ${shop.rank[i].nameRank}">
 
           <div class="card-content">
-              <h2>${shop.rank[i].nameRank}</h2>
-              <p>Thời gian: ${shop.rank[i].thoiGian} ngày</p>
-              <div id="overlay"></div>
-            <button type="button" onclick="offRank()" class="off-rank"></button>
-            <ul id="rankInfo">
-            ${cacQuyenLoi}
-                <button id="closeBtn" onclick="hideRank()">Đóng</button>
-            </ul>
-             
-              </div>
-              <button class="btn btn-more" type="button" onclick="showRank()">Xem thêm</button>
-                  <button class="btn btn-dark" type="button" onclick="buyRank('${shop.rank[i].group}')">Mua rank ${shop.rank[i].nameRank}</button>
+    <h2>${shop.rank[i].nameRank}</h2>
+    <p>Thời gian: ${shop.rank[i].thoiGian} ngày</p>
+    <div id="overlay" class="overlay"></div>
+    <ul id="rankInfo" class="rankInfo">
+        ${cacQuyenLoi}
+        <button type="button" onclick="hideRank()" class="closeBtn">Đóng</button>
+    </ul>
+</div>
+<button class="btn btn-more" type="button" onclick="showRank()">Xem thêm</button>
+<button class="btn btn-dark" type="button" onclick="buyRank('${shop.rank[i].group}')">Mua rank ${shop.rank[i].nameRank}</button>
+
               `;
     card.innerHTML = cardHTML;
     rank.appendChild(card);

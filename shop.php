@@ -183,26 +183,31 @@
                 <h1 class="m-mobile-title">Shop Rank</h1>
             </div>
 
-            <div class="cards" id="rank"></div>
+            <div class="cards" id="rank">
 
-            <div class="cards">
-                <div class="card">
-                    <button>a</button>
-                </div>
+
+                <!-- <div class="btn-info">
+                    <button class="btn btn-dark" type="button" onclick="buyRank('${shop.rank[i].group}')">Mua rank
+                        đồng</button>
+                    <button class="btn btn-more" type="button" onclick="showRank()">Xem thêm</button>
+                </div> -->
+
             </div>
 
+        </div>
 
 
 
 
 
-            <!-- shop pet -->
-            <div class="main-title flex">
-                <img src="asset/IMG/pet.jpeg" alt="image of box illustration">
-                <h1 class="m-desktop-title">Shop Pet</h1>
-                <h1 class="m-mobile-title">Shop Pet</h1>
-            </div>
-            <div class="cards" id="pet"></div>
+
+        <!-- shop pet -->
+        <div class="main-title flex">
+            <img src="asset/IMG/pet.jpeg" alt="image of box illustration">
+            <h1 class="m-desktop-title">Shop Pet</h1>
+            <h1 class="m-mobile-title">Shop Pet</h1>
+        </div>
+        <div class="cards" id="pet"></div>
 
         </div>
     </main>
@@ -237,46 +242,17 @@
 
 </html>
 <script>
-// function showRank() {
-//     var overlay = document.getElementById("overlay");
-//     var rankInfo = document.getElementById("rankInfo");
-//     if (rankInfo.style.display === "none") {
-//         overlay.style.display = "block"; // Hiển thị overlay
-//         rankInfo.style.display = "block"; // Hiển thị rankInfo
-//         // Thêm mã JavaScript để thay đổi kích thước của trang web
-//         document.body.style.width = "80%";
-//     } else {
-//         overlay.style.display = "none"; // Ẩn overlay
-//         rankInfo.style.display = "none"; // Ẩn rankInfo
-//         // Trả lại kích thước ban đầu của trang web
-//         document.body.style.width = "100%";
-//     }
-// }
-var isOverlayVisible = false;
-
 function showRank() {
     var overlay = document.getElementById("overlay");
     var rankInfo = document.getElementById("rankInfo");
-    var closeBtn = document.getElementById("closeBtn");
-    if (!isOverlayVisible) {
-        overlay.style.display = "block"; // Hiển thị overlay
-        rankInfo.style.display = "block"; // Hiển thị rankInfo
-        closeBtn.style.display = "block"; // Hiển thị nút đóng
-        isOverlayVisible = true; // Đặt biến isOverlayVisible thành true
-    }
+    overlay.style.display = "block";
+    rankInfo.style.display = "block"; // Hiển thị rankInfo
 }
-
 
 function hideRank() {
     var overlay = document.getElementById("overlay");
     var rankInfo = document.getElementById("rankInfo");
-    var closeBtn = document.getElementById("closeBtn");
-    if (isOverlayVisible) {
-        overlay.style.display = "none"; // Ẩn overlay
-        rankInfo.style.display = "none"; // Ẩn rankInfo
-        closeBtn.style.display = "none"; // Ẩn nút đóng
-        // Trả lại kích thước ban đầu của trang web
-        isOverlayVisible = false; // Đặt biến isOverlayVisible thành false
-    }
+    overlay.style.display = "none";
+    rankInfo.style.display = "none";
 }
 </script>
