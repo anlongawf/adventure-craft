@@ -183,16 +183,39 @@
                 <h1 class="m-mobile-title">Shop Rank</h1>
             </div>
 
-            <div class="cards" id="rank">
 
+            <div class="rank-menu">
+                <div class="card">
+                    <img src="asset/IMG/copper-rank.svg" alt="Copper VIP Illustration">
 
-                <!-- <div class="btn-info">
-                    <button class="btn btn-dark" type="button" onclick="buyRank('${shop.rank[i].group}')">Mua rank
-                        đồng</button>
-                    <button class="btn btn-more" type="button" onclick="showRank()">Xem thêm</button>
-                </div> -->
+                    <div class="card-content">
+                        <h2>Copper VIP</h2>
+                        <p>Thời gian: 30 ngày</p>
+                        <h3>Quyền lợi:</h3>
+                        <ul class="pms">
+                            <li>
+                                <p class="desc">Hiển thị icon rank <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sử dụng /craft <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Mua được hiệu ứng /pe <i class="fa-solid fa-x"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sỡ hữu được pet nepet <i class="fa-solid fa-check"></i></p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <button class="btn btn-dark" type="button">50 Xu</button>
+                </div>
 
             </div>
+
+
+
+
 
         </div>
 
@@ -241,18 +264,3 @@
 </body>
 
 </html>
-<!-- <script>
-function showRank(i) {
-    var overlay = document.getElementById(`${i}-overlay`);
-    var rankInfo = document.getElementById(`${i}-rankInfo`);
-    overlay.style.display = "block";
-    rankInfo.style.display = "block"; // Hiển thị rankInfo
-}
-
-function hideRank(i) {
-    var overlay = document.getElementById(`${i}-overlay`);
-    var rankInfo = document.getElementById(`${i}-rankInfo`);
-    overlay.style.display = "none";
-    rankInfo.style.display = "none";
-}
-</script> -->

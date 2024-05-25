@@ -116,6 +116,9 @@
     }
   }
 }
+.pms {
+  padding-left: 20px;
+}
 
 @media screen and (min-width: 1023px) and (max-width: 1329px) {
   .card-cosmetics {
@@ -131,55 +134,7 @@
   width: 100%;
   height: 270px;
 }
-
-#overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 998;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-#rankInfo {
-  position: relative;
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-  width: 50%;
-  height: 50%;
-}
-#rankInfo li {
-  font-family: 'Roboto', sans-serif;
-  margin-top: 20px;
-  list-style-type: none;
-  text-align: center;
-  color: #333;
-}
-
-#overlay.active {
-  display: block;
-  opacity: 1;
-}
-
-#rankInfo.active {
-  display: block;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-#closeBtn {
-  position: absolute;
-  top: 10px;
-  right: 25px;
+.rank-menu {
+  display: flex;
+  justify-content: center;
 }
