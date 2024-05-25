@@ -1,6 +1,7 @@
 var shop = {
   rank: [
     {
+      imgRank: "",
       nameRank: 'Đồng',
       group: 'copper',
       price: 150,
@@ -15,6 +16,37 @@ var shop = {
       ],
     },
     {
+      imgRank: "",
+      nameRank: 'Vàng',
+      group: 'gold',
+      price: 150,
+      thoiGian: 30,
+      type: 'd',
+      quyenLoi: [
+        'Được sử dụng /gamemode c',
+        'Được sử dụng /pv 5',
+        'Được sử dụng đến chết',
+        'Quyền lợi tiếp',
+        'Quyền lợi tiếp',
+      ],
+    },
+    {
+      imgRank: "",
+      nameRank: 'Đồng',
+      group: 'copper',
+      price: 150,
+      thoiGian: 30,
+      type: 'd',
+      quyenLoi: [
+        'Được sử dụng /gamemode c',
+        'Được sử dụng /pv 5',
+        'Được sử dụng đến chết',
+        'Quyền lợi tiếp',
+        'Quyền lợi tiếp',
+      ],
+    },
+    {
+      imgRank: "",
       nameRank: 'Vàng',
       group: 'gold',
       price: 150,
@@ -198,11 +230,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     cardHTML = `
+    <img src="${shop.rank[i].imgRank}" alt="Copper VIP Illustration">
+    <div class="card-content">
+        <h2>${shop.rank[i].nameRank}</h2>
+        <p>Thời gian: ${shop.rank[i].thoiGian} ngày</p>
+        <h3>Quyền lợi:</h3>
+        <ul class="pms">
+            <li>
+                <p class="desc">Hiển thị icon rank <i class="fa-solid fa-check"></i></p>
+            </li>
+            <li>
+                <p class="desc">Sử dụng /craft <i class="fa-solid fa-check"></i></p>
+            </li>
+            <li>
+                <p class="desc">Mua được hiệu ứng /pe <i class="fa-solid fa-x"></i></p>
+            </li>
+            <li>
+                <p class="desc">Sỡ hữu được pet nepet <i class="fa-solid fa-check"></i></p>
+            </li>
+        </ul>
+
+    </div>
+    <button class="btn btn-dark" type="button">${shop.rank[i].price} Xu</button>
         `;
 
     card.innerHTML = cardHTML;
     rank.appendChild(card);
-    hideRank(`${shop.rank[i].group}`);
+    // hideRank(`${shop.rank[i].group}`);
   }
 
   var pet = document.getElementById('pet');
