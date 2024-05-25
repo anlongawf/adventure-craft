@@ -118,6 +118,7 @@
 }
 .pms {
   padding-left: 20px;
+  margin-top: 0;
 }
 
 @media screen and (min-width: 1023px) and (max-width: 1329px) {
@@ -137,4 +138,37 @@
 .rank-menu {
   display: flex;
   justify-content: center;
+}
+
+.rank-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 0 21%;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 0 100%;
+    margin: 10px 0;
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+h3 {
+  margin-bottom: 0;
 }

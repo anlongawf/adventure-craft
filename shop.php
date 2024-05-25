@@ -210,6 +210,186 @@
                     </div>
                     <button class="btn btn-dark" type="button">50 Xu</button>
                 </div>
+                <div class="card">
+                    <img src="asset/IMG/copper-rank.svg" alt="Copper VIP Illustration">
+
+                    <div class="card-content">
+                        <h2>Copper VIP</h2>
+                        <p>Thời gian: 30 ngày</p>
+                        <h3>Quyền lợi:</h3>
+                        <ul class="pms">
+                            <li>
+                                <p class="desc">Hiển thị icon rank <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sử dụng /craft <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Mua được hiệu ứng /pe <i class="fa-solid fa-x"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sỡ hữu được pet nepet <i class="fa-solid fa-check"></i></p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <button class="btn btn-dark" type="button">50 Xu</button>
+                </div>
+                <div class="card">
+                    <img src="asset/IMG/copper-rank.svg" alt="Copper VIP Illustration">
+
+                    <div class="card-content">
+                        <h2>Copper VIP</h2>
+                        <p>Thời gian: 30 ngày</p>
+                        <h3>Quyền lợi:</h3>
+                        <ul class="pms">
+                            <li>
+                                <p class="desc">Hiển thị icon rank <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sử dụng /craft <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Mua được hiệu ứng /pe <i class="fa-solid fa-x"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sỡ hữu được pet nepet <i class="fa-solid fa-check"></i></p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <button class="btn btn-dark" type="button">50 Xu</button>
+                </div>
+                <div class="card">
+                    <img src="asset/IMG/copper-rank.svg" alt="Copper VIP Illustration">
+
+                    <div class="card-content">
+                        <h2>Copper VIP</h2>
+                        <p>Thời gian: 30 ngày</p>
+                        <h3>Quyền lợi:</h3>
+                        <ul class="pms">
+                            <li>
+                                <p class="desc">Hiển thị icon rank <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sử dụng /craft <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Mua được hiệu ứng /pe <i class="fa-solid fa-x"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sỡ hữu được pet nepet <i class="fa-solid fa-check"></i></p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <button class="btn btn-dark" type="button">50 Xu</button>
+                </div>
+
+
+            </div>
+            <div class="rank-menu">
+                <div class="card">
+                    <img src="asset/IMG/copper-rank.svg" alt="Copper VIP Illustration">
+
+                    <div class="card-content">
+                        <h2>Copper VIP</h2>
+                        <p>Thời gian: 30 ngày</p>
+                        <h3>Quyền lợi:</h3>
+                        <ul class="pms">
+                            <li>
+                                <p class="desc">Hiển thị icon rank <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sử dụng /craft <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Mua được hiệu ứng /pe <i class="fa-solid fa-x"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sỡ hữu được pet nepet <i class="fa-solid fa-check"></i></p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <button class="btn btn-dark" type="button">50 Xu</button>
+                </div>
+                <div class="card">
+                    <img src="asset/IMG/copper-rank.svg" alt="Copper VIP Illustration">
+
+                    <div class="card-content">
+                        <h2>Copper VIP</h2>
+                        <p>Thời gian: 30 ngày</p>
+                        <h3>Quyền lợi:</h3>
+                        <ul class="pms">
+                            <li>
+                                <p class="desc">Hiển thị icon rank <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sử dụng /craft <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Mua được hiệu ứng /pe <i class="fa-solid fa-x"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sỡ hữu được pet nepet <i class="fa-solid fa-check"></i></p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <button class="btn btn-dark" type="button">50 Xu</button>
+                </div>
+                <div class="card">
+                    <img src="asset/IMG/copper-rank.svg" alt="Copper VIP Illustration">
+
+                    <div class="card-content">
+                        <h2>Copper VIP</h2>
+                        <p>Thời gian: 30 ngày</p>
+                        <h3>Quyền lợi:</h3>
+                        <ul class="pms">
+                            <li>
+                                <p class="desc">Hiển thị icon rank <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sử dụng /craft <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Mua được hiệu ứng /pe <i class="fa-solid fa-x"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sỡ hữu được pet nepet <i class="fa-solid fa-check"></i></p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <button class="btn btn-dark" type="button">50 Xu</button>
+                </div>
+                <div class="card">
+                    <img src="asset/IMG/copper-rank.svg" alt="Copper VIP Illustration">
+
+                    <div class="card-content">
+                        <h2>Copper VIP</h2>
+                        <p>Thời gian: 30 ngày</p>
+                        <h3>Quyền lợi:</h3>
+                        <ul class="pms">
+                            <li>
+                                <p class="desc">Hiển thị icon rank <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sử dụng /craft <i class="fa-solid fa-check"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Mua được hiệu ứng /pe <i class="fa-solid fa-x"></i></p>
+                            </li>
+                            <li>
+                                <p class="desc">Sỡ hữu được pet nepet <i class="fa-solid fa-check"></i></p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <button class="btn btn-dark" type="button">50 Xu</button>
+                </div>
+
 
             </div>
 
