@@ -90,7 +90,7 @@ var shop = {
       canRide: false,
       canFly: false,
       price: 30,
-      permission: 'pet.warrior',
+      permission: 'mcpet.pet_bunny',
     },
     {
       srcImage: 'asset/img-pets/killerbunny.png',
@@ -100,7 +100,7 @@ var shop = {
       canRide: false,
       canFly: false,
       price: 30,
-      permission: 'pet.darkKnight',
+      permission: 'mcpet.pet_killer_bunny',
     },
     {
       srcImage: 'asset/img-pets/eggofhealing.png',
@@ -110,7 +110,7 @@ var shop = {
       canRide: false,
       canFly: false,
       price: 40,
-      permission: 'pet.paladin',
+      permission: 'mcpet.pet_egg_of_healing',
     },
     {
       srcImage: 'asset/img-pets/eggofspeed.png',
@@ -120,7 +120,7 @@ var shop = {
       canRide: false,
       canFly: false,
       price: 40,
-      permission: 'pet.dragonWarrior',
+      permission: 'mcpet.pet_egg_of_speed',
     },
     {
       srcImage: 'asset/img-pets/eggofstrength.png',
@@ -130,7 +130,7 @@ var shop = {
       canRide: false,
       canFly: false,
       price: 40,
-      permission: 'pet.martialArtist',
+      permission: 'mcpet.pet_egg_of_strength',
     },
     {
       srcImage: 'asset/img-pets/capybara.png',
@@ -140,7 +140,7 @@ var shop = {
       canRide: true,
       canFly: false,
       price: 45,
-      permission: '',
+      permission: 'mcpet.capybara_mount',
     },
     {
       srcImage: 'asset/img-pets/firecat.png',
@@ -150,7 +150,7 @@ var shop = {
       canRide: false,
       canFly: false,
       price: 40,
-      permission: '',
+      permission: 'mcpet.fire_cat',
     },
     {
       srcImage: 'asset/img-pets/greenfog.png',
@@ -160,7 +160,12 @@ var shop = {
       canRide: true,
       canFly: false,
       price: 55,
-      permission: '',
+      permission: [
+        'mcpet.frog_green',
+        'skin.frog_green',
+        'skin.frog_permafrost',
+        'skin.frog_royal',
+      ],
     },
     {
       srcImage: 'asset/img-pets/frostcat.png',
@@ -170,7 +175,7 @@ var shop = {
       canRide: false,
       canFly: false,
       price: 40,
-      permission: '',
+      permission: 'mcpet.frost_goat',
     },
     {
       srcImage: 'asset/img-pets/arcanegolem.png',
@@ -180,7 +185,13 @@ var shop = {
       canRide: true,
       canFly: false,
       price: 65,
-      permission: '',
+      permission: [
+        'mcpet.golem_arcane',
+        'skin.golem_arcane',
+        'skin.golem_corrupted',
+        'skin.golem_magma',
+        'skin.golem_royal',
+      ],
     },
     {
       srcImage: 'asset/img-pets/healingflower.png',
@@ -190,7 +201,7 @@ var shop = {
       canRide: false,
       canFly: false,
       price: 35,
-      permission: '',
+      permission: 'mcpet.healing_flower',
     },
     {
       srcImage: 'asset/img-pets/pegasus.png',
@@ -200,7 +211,7 @@ var shop = {
       canRide: true,
       canFly: true,
       price: 150,
-      permission: '',
+      permission: 'skin.horse_pegasus',
     },
     {
       srcImage: 'asset/img-pets/spartanhost.png',
@@ -210,7 +221,13 @@ var shop = {
       canRide: true,
       canFly: false,
       price: 100,
-      permission: '',
+      permission: [
+        'mcpet.horse_spartan',
+        'skin.horse_spartan',
+        'skin.horse_unicorn',
+        'skin.horse_glacial',
+        'skin.horse_magma',
+      ],
     },
     {
       srcImage: 'asset/img-pets/kitsune.png',
@@ -220,7 +237,12 @@ var shop = {
       canRide: true,
       canFly: false,
       price: 85,
-      permission: '',
+      permission: [
+        'mcpet.kitsune_normal',
+        'skin.kitsune_normal',
+        'skin.kitsune_inferno',
+        'skin.kitsune_demonic',
+      ],
     },
     {
       srcImage: 'asset/img-pets/ghostfantom.png',
@@ -230,7 +252,11 @@ var shop = {
       canRide: true,
       canFly: true,
       price: 150,
-      permission: '',
+      permission: [
+        'mcpet.phantom_ghost',
+        'skin.phantom_ghost',
+        'skin.phantom_ender',
+      ],
     },
     {
       srcImage: 'asset/img-pets/phoenix.png',
@@ -240,7 +266,13 @@ var shop = {
       canRide: true,
       canFly: true,
       price: 180,
-      permission: '',
+      permission: [
+        'mcpet.phoenix_flame',
+        'skin.phoenix_flame',
+        'skin.phoenix_darkflame',
+        'skin.phoenix_light',
+        'skin.phoenix_thunder',
+      ],
     },
     {
       srcImage: 'asset/img-pets/speedrex.png',
@@ -250,7 +282,7 @@ var shop = {
       canRide: false,
       canFly: false,
       price: 40,
-      permission: '',
+      permission: 'mcpet.speed_rex',
     },
     {
       srcImage: 'asset/img-pets/forest.png',
@@ -260,7 +292,12 @@ var shop = {
       canRide: true,
       canFly: false,
       price: 35,
-      permission: '',
+      permission: [
+        'mcpet.tusker_forest',
+        'skin.tusker_forest',
+        'skin.tusker_dreamlight',
+        'skin.tusker_demonic',
+      ],
     },
     {
       srcImage: 'asset/img-pets/dire.png',
@@ -270,7 +307,13 @@ var shop = {
       canRide: true,
       canFly: true,
       price: 35,
-      permission: '',
+      permission: [
+        'mcpet.wolfhawk_dire',
+        'skin.wolfhawk_dire',
+        'skin.wolfhawk_fallen',
+        'skin.wolfhawk_fullmoon',
+        'skin.wolfhawk_stormcloud',
+      ],
     },
     {
       srcImage: 'asset/img-pets/green.png',
@@ -280,7 +323,13 @@ var shop = {
       canRide: true,
       canFly: true,
       price: 180,
-      permission: '',
+      permission: [
+        'mcpet.wyvern_green',
+        'skin.wyvern_green',
+        'skin.wyvern_ender',
+        'skin.wyvern_inferno',
+        'skin.wyvern_undead',
+      ],
     },
   ],
 };
