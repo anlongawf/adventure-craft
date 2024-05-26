@@ -291,7 +291,7 @@ var shop = {
       skinAmount: 2,
       canRide: true,
       canFly: false,
-      price: 35,
+      price: 65,
       permission: [
         'mcpet.tusker_forest',
         'skin.tusker_forest',
@@ -306,7 +306,7 @@ var shop = {
       skinAmount: 3,
       canRide: true,
       canFly: true,
-      price: 35,
+      price: 180,
       permission: [
         'mcpet.wolfhawk_dire',
         'skin.wolfhawk_dire',
