@@ -269,12 +269,13 @@ body {
   }
   .rank {
     margin-right: 10px;
-    width: 150px;
+    width: 250px;
   }
   .profile .mmcore {
     display: flex;
     justify-content: center;
     display: flex;
+    margin: 5px 0;
   }
 
   .product {
@@ -304,7 +305,6 @@ body {
   }
 
   .mmcore {
-    margin-left: 12px;
     margin-top: 5px;
   }
 
@@ -315,10 +315,22 @@ body {
   .mmcore .level {
     margin-left: 10px;
   }
+
+  .eco {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
+    width: 226px;
+  }
+  .eco .money {
+  }
+
   /* pagination */
 
   .widget {
-    margin-top: 20px;
+    margin-top: 100px;
     width: 300px;
     height: 350px;
   }
@@ -350,13 +362,15 @@ body {
   .class,
   .level {
     font-size: 18px;
-    color: #555555;
   }
 
   .rank::before {
     content: '⭐ ';
   }
 
+  .money::before {
+    content: '💵 ';
+  }
   .xu::before {
     content: '💰 ';
   }
@@ -368,4 +382,10 @@ body {
   .level::before {
     content: '⬆️ ';
   }
+}
+
+.infor {
+  width: 90%;
+  height: 150px;
+  position: absolute;
 }

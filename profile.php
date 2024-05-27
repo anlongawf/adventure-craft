@@ -73,11 +73,15 @@
                 <div class="infor">
                     <div class="rank-xu">
                         <p class="rank">Rank: Kim cương</p>
-                        <p class="xu">Xu: 1000</p>
+
                     </div>
                     <div class="mmcore">
                         <p class="class">Nghề: Archer</p>
                         <p class="level">Cấp độ: 100</p>
+                    </div>
+                    <div class="eco">
+                        <p class="xu">Xu: 1000</p>
+                        <p class="money">Bạc: 1000</p>
                     </div>
                 </div>
             </div>
