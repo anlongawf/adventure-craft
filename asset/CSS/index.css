@@ -12,17 +12,6 @@
   background-color: green;
 }
 
-.nav {
-  padding: 10px;
-  background-color: #5865f2;
-  align-items: center;
-}
-
-.nav span {
-  color: #ffffff;
-  font-size: 1rem;
-}
-
 /*--- Page header ---*/
 
 .header {

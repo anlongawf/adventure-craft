@@ -220,7 +220,7 @@ ul {
   }
   .container {
     max-width: 50rem;
-    margin: 50px auto;
+    margin: 200px auto auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;

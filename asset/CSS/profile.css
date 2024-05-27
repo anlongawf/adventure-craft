@@ -39,7 +39,6 @@ ul {
   border-radius: 5px;
 }
 
-/* CSS cho giao diện di động */
 @media (max-width: 768px) {
   .header {
     padding: 10px 0;

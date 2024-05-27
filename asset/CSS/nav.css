@@ -1,179 +1,149 @@
-/* NAV */
-.user {
-  text-align: center;
-}
-a {
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
   text-decoration: none;
-  /* color: black; */
 }
-ul {
-  list-style-type: none;
-}
-
+/* CSS cho giao diện PC */
 .nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
-  border-bottom: 2px solid white;
-  font-family: 'Panton', sans-serif !important;
-  background-color: var(--secondary-bc);
+  align-items: center;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-.nav-list a {
-  padding: 15px;
-  font-size: 24px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--secondary-tc);
+.nav-left {
+  list-style: none;
+  margin-left: 25px;
+  padding: 0;
 }
 
-.nav-list a:hover {
+.nav-left li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav-left li a {
+  color: #abc1dd;
+}
+.nav-left li a:hover {
+  color: #5886c2;
+}
+
+.nav-right {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
   border-radius: 5px;
-  color: var(--primary-tc);
-  background-color: #ffffff;
 }
 
-.nav-btn:hover {
-  transform: translateY(-5px);
+.nav-right li {
+  margin-top: 10px;
 }
 
-.nav-logo {
+.nav-right li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.nav-right a:hover {
+  color: #007bff;
+}
+.right {
+  display: flex;
+  position: relative;
+  align-items: center;
   cursor: pointer;
 }
 
-.nav-logo h1 {
-  color: var(--secondary-tc);
-  margin: 10px;
-  font-size: 30px;
-  text-transform: uppercase;
+.right span {
+  color: #aeb2c4;
 }
 
-.nav-logo h1::after {
-  content: '';
-  width: 70%;
-  height: 2px;
-  margin: auto;
-  display: block;
-  background-color: #acacac;
+.right img {
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 12px;
+  margin-top: 5px;
 }
 
-.nav-list {
-  display: flex;
-  justify-content: center;
+.right .nav-right {
+  top: 50px;
+  position: absolute;
+  background-color: #575d77;
+  right: 20px;
+  width: 150px;
+  height: 200px;
+}
+.right .nav-right li a {
+  color: #dadce4;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+}
+.right .nav-right li:hover {
+  background-color: #606683;
+}
+.right .nav-right i {
+  margin-right: 10px;
 }
 
-.nav-btn {
-  border-radius: 5px;
-  padding: 15px 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: 2px solid white;
-  color: var(--secondary-tc);
-  text-shadow: 0px 1.5px 0px #ebe3e340;
-  transition: 0.4s ease-in-out;
-}
-
-.flex a:hover {
-  text-decoration: underline;
-}
-
-.nav-btn span {
-  color: var(--primary-button-tc);
-}
-
-.btn-login {
-  background-color: var(--primary-button-bc);
-}
-
-.btn-sucess {
-  margin-left: 10px;
-}
-
-/* pc */
-@media only screen and (min-width: 1000px) and (max-width: 1920px) {
-  .menu-row {
-    display: none;
-  }
+/* CSS cho giao diện mobile */
+@media only screen and (max-width: 650px) {
   .nav {
-    background-color: #0f0f0f;
-    padding: 10px;
-  }
-  .menu {
-    display: none;
-  }
-  .open-menu {
-    display: none;
-  }
-
-  .nav-bar {
+    position: relative;
+    flex-direction: column;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    width: 100%;
+  }
+  .nav-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 15px;
+    padding-right: 80px;
   }
 
-  .name-user {
-    display: flex;
-    align-items: center;
-    padding: 5px 15px 5px 15px;
-    background-color: #1cc88a;
-    border-radius: 5px;
-  }
-  .name-user .name {
-    max-width: 100px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  .nav-left,
+  .nav-right {
+    text-align: center;
+    width: 95%;
   }
 
-  .name-user .name,
-  .name-user .point {
+  .nav-left li {
+    display: inline-block;
+  }
+  .nav-left li,
+  .nav-right li {
     margin-right: 10px;
+    margin-bottom: 0;
   }
 
-  .navbars-title-right {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+  .right {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
-  .navbars-title-right a {
-    margin-left: 10px;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+  .right span {
+    display: none;
   }
-
-  .navbars-title-right a:hover {
-    background-color: #ccc;
-  }
-
-  .log-in {
-    background-color: #4caf50;
-    color: white;
-  }
-
-  .register {
-    background-color: #008cba;
-    color: white;
-  }
-
-  .log-out {
-    background-color: #f44336;
-    color: white;
-  }
-
-  .donate {
-    margin-left: 15px;
-    background-color: rgb(246, 194, 62);
-    color: white;
-    padding: 5px 15px 5px 15px;
-    background-color: #f6c23e;
-    border-radius: 5px;
+  .right ul li {
+    text-align: left;
   }
 }
 
-/* pc */
+.nav-right {
+  display: none;
+}
+
+.nav-right.active {
+  display: block;
+}

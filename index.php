@@ -39,7 +39,6 @@
     <link rel="stylesheet" href="asset/CSS/index.css" />
     <link rel="stylesheet" href="asset/CSS/nav.css">
     <link rel="stylesheet" href="CSS/Components/animations.css" />
-    <link rel="stylesheet" href="asset/CSS/nav-mobile.css">
     <link rel="stylesheet" href="asset/fonts/fontawesome-free-6.5.2-web/css/all.css" />
     <script src="backend/JS/check-point.js"></script>
     <script src="backend/JS/check-login.js"></script>
@@ -51,6 +50,10 @@
         checkUsername("name");
     });
     </script>
+
+    <!-- jquere js for nav -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 
     <!--=== SEO tags ===-->
@@ -64,102 +67,54 @@
 
 <body>
     <!--=== NAV ===-->
-    <div class="menu-row">
-        <span class="open-menu"><i class="fa-solid fa-bars"></i>Menu</span>
-        <ul>
-            <li><a href="nap-the/">Nạp thẻ</a></li>
-            <li><a href="shop.php">Shop</a></li>
-            <li><a href="login.php" class="log-in">Đăng nhập</a></li>
-            <li><a href="sign-up.php" class="register">Đăng ký</a></li>
-            <li><a href="logout.php" class="log-out">Đăng xuất</a></li>
-        </ul>
-    </div>
+
+    <script src="asset/JS/nav.js"></script>
     <nav class="nav">
-
-
-        <!-- <div class="nav-list flex">
-            <a class="nav-item-1" href="#!"><span>Home</span></a> 
-            <a class="nav-item-2" href="#!"><span>Shop</span></a>
-            <a class="nav-item-4" href="#!"><span>Discord</span></a> 
-        </div> -->
-
-        <div class="nav-bar">
-            <div class="navbars-title flex">
-                <div class="name-user">
-
-                    <P class="name"></P>
-                    <span class="point"></span>
-                    <i class="fa-solid fa-money-bill"></i>
-                </div>
-
-                <a href="nap-the/" class="donate">Nạp thẻ <i class="fa-solid fa-circle-dollar-to-slot"></i></a>
-            </div>
-
-
-            <div class="navbars-title-right">
-                <a href="login.php" class="log-in"> Đăng nhập <i class="fa-solid fa-right-to-bracket"></i></a>
-                <a class="register" href="sign-up.php">Đăng kí</a>
-                <a href="logout.php" class="log-out">Đăng xuất <i class="fa-solid fa-right-from-bracket"></i></a>
-
-            </div>
-
+        <div class="lef">
+            <ul class="nav-left">
+                <li>
+                    <a href="index.php">Trang chủ </a>
+                </li>
+                <li>
+                    <a href="shop.php">Cửa hàng</a>
+                </li>
+                <li>
+                    <a href="#">Wiki</a>
+                </li>
+                <li>
+                    <a href="nap-the/">Nạp thẻ</a>
+                </li>
+            </ul>
         </div>
-
+        <div class="right">
+            <span class="username">Username</span>
+            <img src="asset/IMG/avatar.png" alt="" class="avatar">
+            <ul class="nav-right">
+                <li>
+                    <a href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
+                </li>
+                <li>
+                    <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
+                </li>
+                <li>
+                    <a href="login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
+                </li>
+                <li>
+                    <a href="sign-up.php"><i class="fa-solid fa-registered"></i>Đăng ký</a>
+                </li>
+                <li>
+                    <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    <!--=== Navbar for mobile ===-->
-    <script>
-    // JavaScript để ẩn menu-content khi trang được tải lần đầu
-    document.addEventListener('DOMContentLoaded', function() {
-        var menuContent = document.getElementById('menuContent');
-        menuContent.style.display = 'none';
-    });
-
-    function toggleMenu() {
-        var menuContent = document.getElementById('menuContent');
-        if (menuContent.style.display === 'block') {
-            menuContent.style.display = 'none';
-        } else {
-            menuContent.style.display = 'block';
-        }
-    }
-
-    function closeMenu() {
-        var menuContent = document.getElementById('menuContent');
-        menuContent.style.display = 'none';
-    }
-    </script>
 
     <!--=== Header ===-->
     <header class="header">
-        <div class="header-title">
-            <!--=== Navbar for mobile ===-->
-
-
-            <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const openMenu = document.querySelector('.open-menu');
-                const closeMenu = document.querySelector('.close-menu');
-                const menuList = document.querySelector('.menu-row ul');
-
-                // Mở menu khi click vào "Menu"
-                openMenu.addEventListener('click', function() {
-                    menuList.style.display = 'block';
-                    openMenu.style.display = 'none';
-                    closeMenu.style.display = 'inline'; // Hiển thị chữ "Đóng"
-                });
-
-                // Đóng menu khi click vào "Đóng"
-                closeMenu.addEventListener('click', function() {
-                    menuList.style.display = 'none';
-                    openMenu.style.display = 'inline'; // Hiển thị lại chữ "Menu"
-                    closeMenu.style.display = 'none'; // Ẩn chữ "Đóng" đi
-                });
-            });
-            </script>
-
-        </div>
         <h1>Adventure Craft</h1>
         <span>Máy chủ sinh tồn Minecraft đáng chơi ở Việt Nam.</span>
         </div>
@@ -234,18 +189,10 @@
     <!--=== Page Break ===-->
 
     <!--=== Github Section ===-->
-    <section class="github">
-        <div class="github-box">
-            <h1 class="panton">
-                Tham gia Discord <span class="panton">Adventure!</span>
-            </h1>
-            <!-- <p>
-          Các bạn cần phải liên kết tài khoản Minecraft với Discord để có thể
-          chơi được. -->
-            </p>
-            <a class="btn btn-success" href="">Discord <i class="fa-brands fa-discord"></i></a>
-        </div>
-    </section>
+    <!-- <section class="github">
+
+
+    </section> -->
 
     <!--=== Page Break ===-->
     <hr />

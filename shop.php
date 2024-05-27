@@ -36,6 +36,11 @@
     <link rel="stylesheet" href="asset/CSS/shop/Framework.css">
     <link rel="stylesheet" href="asset/fonts/fontawesome-free-6.5.2-web/css/all.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="asset/CSS/nav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
 
 
     <title>Adventure Craft - Shop</title>
@@ -50,122 +55,56 @@
         checkUsername("name-user");
     });
     </script>
+    <script src="asset/JS/nav.js"></script>
+
 </head>
 
 <body>
-    <!--=== Navbar for mobile ===-->
-    <div class="menu-row">
 
-        <span class="open-menu"><i class="fa-solid fa-bars"></i>Menu</span>
-        <span class="close-menu">Đóng</span>
-        <ul>
-            <li>
-                <a href="">Trang chủ</a>
-            </li>
-            <li>
-                <p class="name-user">Tên nhân vật: </p>
-            </li>
-            <li> <span class="point"></span><i class="fa-solid fa-money-bill"></i></li>
-            <li><a href="nap-the/">Nạp thẻ</a></li>
-            <li><a href="">Shop</a></li>
-            <li><a href="login.php" class="log-in">Đăng nhập</a></li>
-            <li><a href="sign-up.php" class="register">Đăng ký</a></li>
-            <li><a href="logout.php" class="log-out">Đăng xuất</a></li>
-        </ul>
-    </div>
+    <!--=== NAV ===-->
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const openMenu = document.querySelector('.open-menu');
-        const closeMenu = document.querySelector('.close-menu');
-        const menuList = document.querySelector('.menu-row ul');
-
-        // Mở menu khi click vào "Menu"
-        openMenu.addEventListener('click', function() {
-            menuList.style.display = 'block';
-            openMenu.style.display = 'none';
-            closeMenu.style.display = 'inline'; // Hiển thị chữ "Đóng"
-        });
-
-        // Đóng menu khi click vào "Đóng"
-        closeMenu.addEventListener('click', function() {
-            menuList.style.display = 'none';
-            openMenu.style.display = 'inline'; // Hiển thị lại chữ "Menu"
-            closeMenu.style.display = 'none'; // Ẩn chữ "Đóng" đi
-        });
-    });
-    </script>
-
-
-
-
-
-    <!--=== Navigation Bar ===-->
     <nav class="nav">
-        <a class="nav-logo flex" href="index.php">
-            <img src="asset/IMG/logo.jpeg" alt="Adventure Craft server logo" width="70px" height="70px">
-            <h1>Adventure Craft</h1>
-        </a>
-
-        <!-- <div class="nav-list flex">
-            <a class="nav-item-1" href="#!"><span>Home</span></a> 
-            <a class="nav-item-2" href="#!"><span>Shop</span></a>
-            <a class="nav-item-4" href="#!"><span>Discord</span></a> 
-        </div> -->
-
-        <div class="nav-bar">
-            <div class="navbars-title flex">
-                <p class="name-user"></p>
-                <p class="point"></p>
-            </div>
-
-
-            <div class="navbars-title-right">
-
-                <a href="nap-the/" class="donate">Nạp thẻ</a>
-                <a href="logout.php" class="log-out">Đăng xuất</a>
-                <a href="login.php" class="log-in">Đăng nhập</a>
-                <a class="register" href="sign-up.php">Đăng kí</a>
-            </div>
-
+        <div class="lef">
+            <ul class="nav-left">
+                <li>
+                    <a href="index.php">Trang chủ </a>
+                </li>
+                <li>
+                    <a href="shop.php">Cửa hàng</a>
+                </li>
+                <li>
+                    <a href="#">Wiki</a>
+                </li>
+                <li>
+                    <a href="nap-the/">Nạp thẻ</a>
+                </li>
+            </ul>
         </div>
-
+        <div class="right">
+            <span class="username">Username</span>
+            <img src="asset/IMG/avatar.png" alt="" class="avatar">
+            <ul class="nav-right">
+                <li>
+                    <a href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
+                </li>
+                <li>
+                    <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
+                </li>
+                <li>
+                    <a href="login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
+                </li>
+                <li>
+                    <a href="sign-up.php"><i class="fa-solid fa-registered"></i>Đăng ký</a>
+                </li>
+                <li>
+                    <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
+                </li>
+            </ul>
         </div>
     </nav>
-
-    <!--=== Navbar for mobile ===-->
-    <section class="nav-mobile">
-        <div class="nav-mobile-title flex">
-            <div class="navbars-bars">
-                <div class="bar bar-1"></div>
-                <div class="bar bar-2"></div>
-                <div class="bar bar-3"></div>
-            </div>
-
-            <div class="navbars-title flex">
-
-                <a href="https://adventurecraft.site/"><img src="asset/IMG/logo.jpeg" alt="Adventure Craft server logo"
-                        width="30px" height="30px"></a>
-                <div class="user-name">
-
-                    <p class="name-user"></p>
-                    <span class="point"></span>
-                </div>
-
-
-                <div class="navbars-title-right">
-
-                    <a href="nap-the/" class="donate">Nạp thẻ</a>
-                    <a href="logout.php" class="log-out">Đăng xuất</a>
-                    <a href="login.php" class="log-in">Đăng nhập</a>
-                    <a class="register" href="sign-up.php">Đăng kí</a>
-                </div>
-
-            </div>
-        </div>
-
-
-    </section>
 
     <!--=== Header ===-->
     <header class="header header-text">
@@ -185,7 +124,7 @@
 
 
             <div class="rank-menu" id="rank">
-                
+
 
 
             </div>

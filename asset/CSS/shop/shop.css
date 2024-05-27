@@ -12,6 +12,7 @@
 .main h1 {
   margin: 0;
   font-size: 60px !important;
+  color: white;
 }
 
 .popup {
@@ -75,6 +76,7 @@
 @media screen and (max-width: 1000px) {
   .main h1 {
     font-size: 40px !important;
+    color: white;
   }
 
   @media screen and (min-width: 320px) and (max-width: 600px) {
