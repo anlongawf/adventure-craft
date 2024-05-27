@@ -34,14 +34,14 @@
         <div class="lef">
             <ul class="nav-left">
                 <li>
-                    <a href="index.php">Trang chủ </a>
+                    <a href="../index.php">Trang chủ </a>
                 </li>
                 <li>
-                    <a href="shop.php">Cửa hàng</a>
+                    <a href="../shop.php">Cửa hàng</a>
                 </li>
 
                 <li>
-                    <a href="nap-the/">Nạp thẻ</a>
+                    <a href="../nap-the/">Nạp thẻ</a>
                 </li>
             </ul>
         </div>
@@ -50,22 +50,22 @@
             <img src="../asset/IMG/avatar.png" alt="" class="avatar">
             <ul class="nav-right">
                 <li>
-                    <a href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
+                    <a href="../profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
                 </li>
                 <li>
-                    <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
+                    <a href="../nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
                 </li>
                 <li>
                     <a href="#"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
                 </li>
                 <li>
-                    <a href="login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
+                    <a href="../login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
                 </li>
                 <li>
-                    <a href="sign-up.php"><i class="fa-solid fa-registered"></i>Đăng ký</a>
+                    <a href="../sign-up.php"><i class="fa-solid fa-registered"></i>Đăng ký</a>
                 </li>
                 <li>
-                    <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
+                    <a href="../logout.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
                 </li>
             </ul>
         </div>
