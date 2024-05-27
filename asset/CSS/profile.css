@@ -177,6 +177,7 @@ body {
     /* padding: 10px; */
     text-align: center;
     margin-top: 75px;
+    margin-bottom: 7rem;
   }
 
   .profile img {
@@ -363,29 +364,29 @@ body {
   .level {
     font-size: 18px;
   }
-
-  .rank::before {
-    content: '⭐ ';
-  }
-
-  .money::before {
-    content: '💵 ';
-  }
-  .xu::before {
-    content: '💰 ';
-  }
-
-  .class::before {
-    content: '🏹 ';
-  }
-
-  .level::before {
-    content: '⬆️ ';
-  }
 }
 
 .infor {
   width: 90%;
   height: 150px;
   position: absolute;
+}
+
+.rank::before {
+  content: '⭐ ';
+}
+
+.money::before {
+  content: '💵 ';
+}
+.xu::before {
+  content: '💰 ';
+}
+
+.class::before {
+  content: '🏹 ';
+}
+
+.level::before {
+  content: '⬆️ ';
 }
