@@ -79,9 +79,6 @@
                     <a href="shop.php">Cửa hàng</a>
                 </li>
                 <li>
-                    <a href="#">Wiki</a>
-                </li>
-                <li>
                     <a href="nap-the/">Nạp thẻ</a>
                 </li>
             </ul>
@@ -118,7 +115,6 @@
         <h1>Adventure Craft</h1>
         <span>Máy chủ sinh tồn Minecraft đáng chơi ở Việt Nam.</span>
         </div>
-        <p id="getIP">play-adventurecraft.online:25565</p>
         <!-- <div class="showline" onclick="copyContent()">
         <p>Tham Gia Ngay!</p>
         <img src="/Images/copy-solid.svg" alt="copy" class="getIP" />
@@ -130,8 +126,8 @@
             </div>
 
             <div class="btn btn-image-secondary flex" id="minescord-wiki" onclick="copyContent()">
-                <i class="fa-solid fa-gamepad"></i>
-                <a class="n-decoration" href="#!" class="getIP">Play now!</a>
+                <i class="fa-solid fa-book"></i>
+                <a class="n-decoration" href="#!">Wiki!</a>
             </div>
         </div>
 

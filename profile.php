@@ -33,9 +33,6 @@
                     <a href="shop.php">Cửa hàng</a>
                 </li>
                 <li>
-                    <a href="#">Wiki</a>
-                </li>
-                <li>
                     <a href="nap-the/">Nạp thẻ</a>
                 </li>
             </ul>

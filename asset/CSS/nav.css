@@ -96,7 +96,7 @@
 /* CSS cho giao diện mobile */
 @media only screen and (max-width: 650px) {
   .nav {
-    position: relative;
+    position: absolute;
     flex-direction: column;
     height: 50px;
     display: flex;
