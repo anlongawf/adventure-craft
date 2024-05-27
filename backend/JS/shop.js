@@ -2,7 +2,7 @@ var shop = {
   rank: [
     {
       imgRank: '',
-      nameRank: 'Đồng',
+      nameRank: 'Sắt',
       group: 'copper',
       price: 150,
       thoiGian: 30,
@@ -32,7 +32,7 @@ var shop = {
     },
     {
       imgRank: '',
-      nameRank: 'Đồng',
+      nameRank: 'Kim cương',
       group: 'copper',
       price: 150,
       thoiGian: 30,

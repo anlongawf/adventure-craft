@@ -1,0 +1,372 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* header */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* CSS cho giao diện di động */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 0;
+    text-align: center;
+  }
+  .header li {
+    margin: 5px 0;
+  }
+  .nav {
+    display: inline-block;
+  }
+}
+
+/* BASE STYLES */
+body {
+  background-color: #e8f0f7;
+  font-family: 'Inter', sans-serif;
+  padding-top: 60px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* NORMAL STYLES */
+.header {
+  background-color: rgb(19, 22, 26);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.logo {
+}
+
+.logo__img {
+  height: 20px;
+  display: block;
+}
+
+.nav {
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 40px;
+}
+
+.nav__item {
+}
+
+.nav__link {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  transition: all 0.4s;
+  position: relative;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.nav__link::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: all 0.2s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav__link:hover::after {
+  opacity: 1;
+}
+
+.btn {
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 1000px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: rgb(28, 128, 228);
+}
+
+/* CSS chung */
+/* Định dạng các phần tử profile */
+
+/* CSS cho mobile */
+@media only screen and (max-width: 650px) {
+  .header__content {
+    padding: 10px;
+  }
+
+  .widget {
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav__item {
+    margin: 0;
+  }
+
+  .nav__link {
+    font-size: 18px;
+  }
+
+  .profile {
+    max-width: 100%;
+    /* padding: 10px; */
+    text-align: center;
+    margin-top: 75px;
+  }
+
+  .profile img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .profile h1 {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  .product {
+    margin-top: 15px;
+  }
+
+  .rank,
+  .xu,
+  .class,
+  .level {
+    font-size: 16px;
+  }
+
+  .product h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .pet-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .pets {
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .name-pets {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .img-pet {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1920px) {
+  .main {
+    display: flex;
+    width: 80%;
+  }
+
+  .profile {
+    position: relative;
+    margin-top: 5px;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .profile img {
+    width: 100px;
+    border-radius: 50%;
+    margin-left: 62px;
+  }
+  .profile h1 {
+    width: 200px;
+    font-size: 1.2rem;
+  }
+  .profile .name {
+    margin-left: 60px;
+  }
+
+  .av-name {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+  }
+  .rank-xu {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+  }
+  .rank {
+    margin-right: 10px;
+    width: 150px;
+  }
+  .profile .mmcore {
+    display: flex;
+    justify-content: center;
+    display: flex;
+  }
+
+  .product {
+    position: relative;
+    width: 60%;
+    height: 500px;
+  }
+  .product h2 {
+    margin-top: 25px;
+    position: absolute;
+  }
+  .product .name-pets {
+    margin-top: 15px;
+  }
+
+  .img-pet {
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 15px;
+  }
+  .pets {
+    margin-top: 50px;
+    margin-right: 15px;
+  }
+  .pet-product {
+    display: flex;
+  }
+
+  .mmcore {
+    margin-left: 12px;
+    margin-top: 5px;
+  }
+
+  .mmcore .class {
+    margin-right: -14px;
+    width: 150px;
+  }
+  .mmcore .level {
+    margin-left: 10px;
+  }
+  /* pagination */
+
+  .widget {
+    margin-top: 20px;
+    width: 300px;
+    height: 350px;
+  }
+
+  .profile {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .profile h1 {
+    font-size: 24px;
+    color: #333333;
+  }
+
+  .rank,
+  .xu,
+  .class,
+  .level {
+    font-size: 18px;
+    color: #555555;
+  }
+
+  .rank::before {
+    content: '⭐ ';
+  }
+
+  .xu::before {
+    content: '💰 ';
+  }
+
+  .class::before {
+    content: '🏹 ';
+  }
+
+  .level::before {
+    content: '⬆️ ';
+  }
+}
