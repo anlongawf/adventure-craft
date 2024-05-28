@@ -5,6 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
 /* CSS cho giao diện PC */
 .nav {
   display: flex;
@@ -124,6 +125,8 @@
   .nav-right li {
     margin-right: 10px;
     margin-bottom: 0;
+    margin-top: 20px;
+    text-align: left;
   }
 
   .right {
@@ -133,10 +136,35 @@
   }
 
   .right span {
-    display: none;
+    /* display: none; */
   }
   .right ul li {
     text-align: left;
+  }
+  .nav-left {
+    display: none; /* Đặt mặc định là ẩn */
+    margin-top: 10px;
+  }
+
+  .nav-left.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #303447;
+    width: 240px;
+    text-align: left;
+    color: #dadce4;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 55px;
+    text-align: left;
+    padding: 6px 0px 20px 20px;
+    border-radius: 5px;
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    padding: 15px;
   }
 }
 
@@ -146,4 +174,10 @@
 
 .nav-right.active {
   display: block;
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1920px) {
+  .nav .menu {
+    display: none;
+  }
 }
