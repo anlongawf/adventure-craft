@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../asset/CSS/nav.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Thêm thư viện jQuery -->
     <link rel="stylesheet" href="../asset/fonts/fontawesome-free-6.5.2-web/css/all.css" />
+    <link rel="shortcut icon" href="../asset/IMG/logo.jpeg" type="image/x-icon">
     <script src="../asset/JS/nav.js"></script>
     <link rel="stylesheet" href="style.css">
 
