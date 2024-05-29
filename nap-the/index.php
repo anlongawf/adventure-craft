@@ -49,7 +49,7 @@
         </div>
         <div class="right">
             <span class="username">Đăng nhập</span>
-            <img src="asset/IMG/avatar.png" alt="" class="avatar">
+            <img src="../asset/IMG/avatar.png" alt="" class="avatar">
             <ul class="nav-right">
                 <li>
                     <a href="../profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
