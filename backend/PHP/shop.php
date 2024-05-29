@@ -45,7 +45,7 @@
 	}
     
     function sql($command){
-        $connection = new PDO("mysql:host=localhost;dbname=playerpoints","root","Sqrtfl0@t01");
+        $connection = new PDO("mysql:host=103.237.87.46;dbname=playerpoints","antrc2","Sqrtfl0@t01");
         $data = $connection->query($command)->fetch();
         return $data;
     }

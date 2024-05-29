@@ -1,7 +1,7 @@
 <?php
     session_start();
     function sql($command){
-        $connection = new PDO("mysql:host=localhost;dbname=playerpoints","root","Sqrtfl0@t01");
+        $connection = new PDO("mysql:host=103.237.87.46;dbname=playerpoints","antrc2","Sqrtfl0@t01");
         $data = $connection->query($command)->fetch();
         return $data;
         // "SELECT points FROM playerpoints_points INNER JOIN playerpoints_username_cache ON playerpoints_points.uuid = playerpoints_username_cache.uuid WHERE playerpoints_username_cache.username = '".$_SESSION["taiKhoan"]."'"

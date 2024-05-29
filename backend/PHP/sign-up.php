@@ -41,7 +41,7 @@
 		// Return the response from Discord (if needed)
 		return $response;
 	}
-    $pdo = new PDO("mysql:host=127.0.0.1;dbname=authme", "root", "Sqrtfl0@t01");
+    $pdo = new PDO("mysql:host=103.237.87.46;dbname=authme", "antrc2", "Sqrtfl0@t01");
     if (isset($_POST["username"],$_POST["password"])){
         $username = $_POST["username"];
         $password = $_POST["password"];
