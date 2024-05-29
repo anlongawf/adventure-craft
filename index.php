@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="asset/CSS/nav.css">
     <link rel="stylesheet" href="CSS/Components/animations.css" />
     <link rel="stylesheet" href="asset/fonts/fontawesome-free-6.5.2-web/css/all.css" />
-    <script src="backend/JS/check-point.js"></script>
+    <!-- <script src="backend/JS/check-point.js"></script>
     <script src="backend/JS/check-login.js"></script>
     <script src="backend/JS/check-username.js"></script>
     <script>
@@ -49,7 +49,7 @@
         checkPoint("point");
         checkUsername("name");
     });
-    </script>
+    </script> -->
 
     <!-- jquere js for nav -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
@@ -83,7 +83,7 @@
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
                 </li>
                 <li>
-                    <a href="/top/"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
+                    <a href="top/"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
                 </li>
             </ul>
         </div>
@@ -98,7 +98,7 @@
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
+                    <a href="changePassword.php"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
                 </li>
                 <li>
                     <a href="login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
@@ -131,7 +131,7 @@
 
             <div class="btn btn-image-secondary flex" id="minescord-wiki" onclick="copyContent()">
                 <i class="fa-solid fa-book"></i>
-                <a class="n-decoration" href="#!">Wiki!</a>
+                <a class="n-decoration" href="wiki/">Wiki!</a>
             </div>
         </div>
 

@@ -78,7 +78,7 @@
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
                 </li>
                 <li>
-                    <a href="/top/"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
+                    <a href="top/"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
                 </li>
             </ul>
         </div>
@@ -93,7 +93,7 @@
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
+                    <a href="changePassword.php"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
                 </li>
                 <li>
                     <a href="login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
