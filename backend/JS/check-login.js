@@ -5,20 +5,13 @@ function checkLogin() {
     .then(result => {
     if (result.success) {
         // Đã đăng nhập
-        login = document.getElementsByClassName('log-in');
-        for (let i of login) {
-            i.style.display = 'none';
-        }
-        register = document.getElementsByClassName('register');
-        for (let i of register) {
-            i.style.display = 'none';
-        }
+        document.getElementById("login").style.display = "none";
+        document.getElementById("sign-up").style.display = "none";
+        document.getElementById("user").innerText = result.playername;
     } else {
         // Chưa đăng nhập
-        logout = document.getElementsByClassName('log-out');
-        for (let i of logout) {
-            i.style.display = 'none';
-        }
+        document.getElementById("changePassword").style.display = "none";
+        document.getElementById("sign-out").style.display = "none";
     }
     })
     .catch(error => {

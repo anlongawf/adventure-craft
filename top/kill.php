@@ -37,26 +37,32 @@
                 </li>
             </ul>
         </div>
+        <script src="../backend/JS/check-login2.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLogin();
+        });
+        </script>
         <div class="right">
-            <span class="username">Đăng nhập</span>
+            <span id="user" class="username">Đăng nhập</span>
             <img src="../asset/IMG/avatar.png" alt="" class="avatar">
             <ul class="nav-right">
                 <li>
                     <a href="../profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
                 </li>
                 <li>
-                    <a href="../nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
+                    <a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
                 </li>
-                <li>
+                <li id="changePassword">
                     <a href="../changePassword.php"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
                 </li>
-                <li>
+                <li id="login">
                     <a href="../login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
                 </li>
-                <li>
+                <li id="sign-up">
                     <a href="../sign-up.php"><i class="fa-solid fa-registered"></i>Đăng ký</a>
                 </li>
-                <li>
+                <li id="sign-out">
                     <a href="../logout.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
                 </li>
             </ul>

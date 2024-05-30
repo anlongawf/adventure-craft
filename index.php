@@ -33,16 +33,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js"></script>
-
+    <!-- <script src="backend/JS/check-username.js"></script> -->
+   
     <!--=== StyleSheet ===-->
     <link rel="stylesheet" href="asset/CSS/default.css" />
     <link rel="stylesheet" href="asset/CSS/index.css" />
     <link rel="stylesheet" href="asset/CSS/nav.css">
     <link rel="stylesheet" href="CSS/Components/animations.css" />
     <link rel="stylesheet" href="asset/fonts/fontawesome-free-6.5.2-web/css/all.css" />
-    <!-- <script src="backend/JS/check-point.js"></script>
-    <script src="backend/JS/check-login.js"></script>
-    <script src="backend/JS/check-username.js"></script>
+    <!-- 
+    
+    
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         checkLogin();
@@ -50,7 +51,12 @@
         checkUsername("name");
     });
     </script> -->
-
+    <script src="backend/JS/check-login.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        checkLogin();
+    });
+    </script>
     <!-- jquere js for nav -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -87,26 +93,32 @@
                 </li>
             </ul>
         </div>
+        <script src="backend/JS/check-login.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLogin();
+        });
+        </script>
         <div class="right">
-            <span class="username">Đăng nhập</span>
+            <span id="user" class="username">Đăng nhập</span>
             <img src="asset/IMG/avatar.png" alt="" class="avatar">
             <ul class="nav-right">
-                <li>
-                    <a href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
+                <li id="profile">
+                    <a  href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
                 </li>
                 <li>
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
                 </li>
-                <li>
+                <li id="changePassword">
                     <a href="changePassword.php"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
                 </li>
-                <li>
+                <li id="login">
                     <a href="login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
                 </li>
-                <li>
+                <li id="sign-up">
                     <a href="sign-up.php"><i class="fa-solid fa-registered"></i>Đăng ký</a>
                 </li>
-                <li>
+                <li id="sign-out">
                     <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
                 </li>
             </ul>

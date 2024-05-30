@@ -1,6 +1,8 @@
 <?php
-  session_start();
-
+    session_start();
+    if(!isset($_SESSION["taiKhoan"])){
+        header("Location: ../login");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,17 +16,11 @@
     <link rel="stylesheet" href="../asset/CSS/nav.css">
     <title>Adventure Craft - Nạp thẻ!</title>
     <link rel="shortcut icon" href="../asset/IMG/logo.jpeg" type="image/x-icon" />
-    <script src="script.js"></script>
+    <script src="qrCode.js"></script>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        checkLogin();
-        checkPoint("point");
-    });
-    </script>
 </head>
 
-<body onload="QRCode()">
+<body>
 
     <!--=== NAV ===-->
 
@@ -47,8 +43,15 @@
                 </li>
             </ul>
         </div>
+        <script src="../backend/JS/check-login2.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            QRCode();
+            checkLogin();
+        });
+        </script>
         <div class="right">
-            <span class="username">Đăng nhập</span>
+            <span id="user" class="username">Đăng nhập</span>
             <img src="../asset/IMG/avatar.png" alt="" class="avatar">
             <ul class="nav-right">
                 <li>
@@ -57,16 +60,16 @@
                 <li>
                     <a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
                 </li>
-                <li>
+                <li id="changePassword">
                     <a href="../changePassword.php"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
                 </li>
-                <li>
+                <li id="login">
                     <a href="../login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
                 </li>
-                <li>
+                <li id="sign-up">
                     <a href="../sign-up.php"><i class="fa-solid fa-registered"></i>Đăng ký</a>
                 </li>
-                <li>
+                <li id="sign-out">
                     <a href="../logout.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
                 </li>
             </ul>
@@ -139,8 +142,15 @@
                                 <td><input type="text" name="pin" required class="pin-input" /></td>
                             </tr>
                         </table>
-                        <button type="submit" name="submit" class="submit-button">Nạp ngay</button>
+                        <button type="submit" name="btn-card" class="submit-button">Nạp ngay</button>
                     </form>
+
+                    <?php
+                        require_once "sendCard.php";
+                        if (isset($response)){
+                            echo $response;
+                        }
+                    ?>
                 </div>
 
                 <!-- Nạp thẻ qua ngân hàng -->
@@ -151,20 +161,21 @@
                             <tr>
                                 <td colspan="2">
                                     <!-- Sử dụng colspan để trải rộng qua cả cột -->
-                                    <div class="qrCode" style="height: 200px;"></div>
+                                    <div id="qrCode" class="qrCode" style="height: 200px;"></div>
+                                    
                                 </td>
                             </tr>
                             <tr>
                                 <td>Số tài khoản:</td>
-                                <td><span id="stk"></span></td>
+                                <td><span>0903982264</span></td>
                             </tr>
                             <tr>
                                 <td>Ngân hàng:</td>
-                                <td><span id="bank"></span></td>
+                                <td><span>MB Bank</span></td>
                             </tr>
                             <tr>
                                 <td>Nội dung chuyển khoản:</td>
-                                <td><span id="user" class="username"></span></td>
+                                <td><span id="name" class="username"></span></td>
                             </tr>
                         </table>
                     </div>

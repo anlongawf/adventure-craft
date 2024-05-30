@@ -42,9 +42,10 @@
 		return $response;
 	}
     $pdo = new PDO("mysql:host=103.237.87.46;dbname=authme", "antrc2", "Sqrtfl0@t01");
-    if (isset($_POST["username"],$_POST["password"])){
+    if (isset($_POST["username"],$_POST["password"],$_POST["email"])){
         $username = $_POST["username"];
         $password = $_POST["password"];
+		$email = $_POST["email"];
         $sql = "SELECT COUNT(*) FROM users WHERE realName = ?";
         sendDiscordMessage("https://discord.com/api/webhooks/1243397009247830036/oPaLjaTaAaFqReRIzkF12eAyTD-FjcqKp2h79MIrmlJx33G-IASZNcmyZuzOS6fR7i1L","**$username** đã đăng kí tài khoản thành công");
         $_SESSION["taiKhoan"] = $username;
@@ -53,9 +54,9 @@
         $count = $stmt->fetchColumn();
         if ($count <= 0){
             $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-            $sql = "INSERT INTO users (name,realName, passWord) VALUES (?,?, ?)";
+            $sql = "INSERT INTO users (name,realName, passWord,email) VALUES (?,?, ?,?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute([strtolower($username),$username, $hashedPassword]);
+            $stmt->execute([strtolower($username),$username, $hashedPassword,$email]);
             echo "Success";
         } else {
             echo "Exist";

@@ -1,4 +1,4 @@
-function checkUsername(CLASS) {
+function checkUsername() {
   
     fetch('backend/PHP/check-username.php')
     .then(response => response.text())

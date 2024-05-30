@@ -1,23 +1,8 @@
 <?php
     session_start();
-    //   function sql($command){
-    // $connection = new PDO("mysql:host=localhost;dbname=playerpoints","root","Sqrtfl0@t01");
-    // $data = $connection->query($command)->fetch();
-    // return $data;
-    // // "SELECT points FROM playerpoints_points INNER JOIN playerpoints_username_cache ON playerpoints_points.uuid = playerpoints_username_cache.uuid WHERE playerpoints_username_cache.username = '".$_SESSION["taiKhoan"]."'"
-    // }
-    // if (isset($_SESSION["taiKhoan"])){
-    //     $name = "".$_SESSION['taiKhoan']."";
-    // } else {
-    //     header("Location: login.php");
-    // }
-    // // Lấy ra số point của người chơi
-    // $command = sql("SELECT points FROM playerpoints_points INNER JOIN playerpoints_username_cache ON playerpoints_points.uuid = playerpoints_username_cache.uuid WHERE playerpoints_username_cache.username = '".$name."'");
-    // if ($command === false){
-    //     $point = 0;
-    // } else {
-    //     $point = $command["points"];
-    // }
+    if(!isset($_SESSION["taiKhoan"])){
+        header("Location: login.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,26 +67,32 @@
                 </li>
             </ul>
         </div>
+        <script src="backend/JS/check-login.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLogin();
+        });
+        </script>
         <div class="right">
-            <span class="username">Đăng nhập</span>
+            <span id="user" class="username">Đăng nhập</span>
             <img src="asset/IMG/avatar.png" alt="" class="avatar">
             <ul class="nav-right">
                 <li>
-                    <a href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
+                    <a  href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
                 </li>
                 <li>
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
                 </li>
-                <li>
+                <li id="changePassword">
                     <a href="changePassword.php"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
                 </li>
-                <li>
+                <li id="login">
                     <a href="login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
                 </li>
-                <li>
+                <li id="sign-up">
                     <a href="sign-up.php"><i class="fa-solid fa-registered"></i>Đăng ký</a>
                 </li>
-                <li>
+                <li id="sign-out">
                     <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
                 </li>
             </ul>

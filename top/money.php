@@ -37,26 +37,32 @@
                 </li>
             </ul>
         </div>
+        <script src="../backend/JS/check-login2.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLogin();
+        });
+        </script>
         <div class="right">
-            <span class="username">Đăng nhập</span>
+            <span id="user" class="username">Đăng nhập</span>
             <img src="../asset/IMG/avatar.png" alt="" class="avatar">
             <ul class="nav-right">
                 <li>
                     <a href="../profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
                 </li>
                 <li>
-                    <a href="../nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
+                    <a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
                 </li>
-                <li>
+                <li id="changePassword">
                     <a href="../changePassword.php"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
                 </li>
-                <li>
+                <li id="login">
                     <a href="../login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
                 </li>
-                <li>
+                <li id="sign-up">
                     <a href="../sign-up.php"><i class="fa-solid fa-registered"></i>Đăng ký</a>
                 </li>
-                <li>
+                <li id="sign-out">
                     <a href="../logout.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
                 </li>
             </ul>
@@ -69,25 +75,44 @@
         <table>
             <thead>
                 <tr>
-                    <th>Bảng xếp hạng</th>
+                    <th>Số thứ tự</th>
                     <th>Người chơi</th>
-                    <th>Cấp độ</th>
                     <th>Xu</th>
+                    <th>Top</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>John Doe</td>
-                    <td>10</td>
-                    <td>1,000,000</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jane Smith</td>
-                    <td>8</td>
-                    <td>800,000</td>
-                </tr>
+                <?php
+                    require_once "../backend/PHP/function.php";
+                    $result = sqlCommand("coinsengine","SELECT ce.*, @ranking := @ranking + 1 AS ranking FROM coinsengine_users ce JOIN (SELECT DISTINCT money FROM coinsengine_users ORDER BY money DESC LIMIT 10) AS top_money ON ce.money = top_money.money JOIN (SELECT @ranking := 0) r ORDER BY ce.money DESC")->fetchAll();
+                ?>
+                <?php foreach ($result as $value) :?>
+                    <tr>
+                        <td><?= $value["ranking"]?></td>
+                        <td><?= $value['name']?></td>
+                        <td><?= $value['money']?></td>
+                        <td><?php
+                            $output = sqlCommand("coinsengine","SELECT DISTINCT money FROM coinsengine_users ORDER BY money DESC LIMIT 10")->fetchAll();
+                            $listMoney = [];
+                            foreach ($output as $item){
+                                $listMoney[] = $item["money"];
+                            }
+                            $top = 1;
+                            $rank;
+                            foreach ($listMoney as $rows){
+                                if ($rows === $value["money"]){
+                                    $rank = $top;
+                                    echo "<span class='top-$rank'>$top</span>";
+                                } else {
+                                    $top++;
+                                }
+                                
+                            }
+
+                            
+                        ?></td>
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
