@@ -1,1 +1,0 @@
-document.getElementById("avatar").src = 'https://cravatar.eu/avatar/Ans/128.png';

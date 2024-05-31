@@ -41,11 +41,23 @@
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
                 </li>
                 <li>
-                    <a href="/top/"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
+                    <a href="#" class="top-ingame"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng </a>
                 </li>
             </ul>
+            <ul class="sub-menu">
+                <li>
+                    <a href="top/point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
+                </li>
+                <li>
+                    <a href="top/money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
+                </li>
+                <li>
+                    <a href="top/level.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng cấp độ</a>
+                </li>
+            </ul>
+
         </div>
-        <script src="backend/JS/check-login.js"></script>
+        <script src="../backend/JS/check-login2.js"></script>
         <script>
         document.addEventListener('DOMContentLoaded', () => {
             checkLogin();
@@ -53,10 +65,10 @@
         </script>
         <div class="right">
             <span id="user" class="username">Đăng nhập</span>
-            <img id="avt" src="asset/IMG/avatar.png" alt="" class="avatar">
+            <img src="asset/IMG/avatar.png" alt="" class="avatar">
             <ul class="nav-right">
                 <li>
-                    <a  href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
+                    <a href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
                 </li>
                 <li>
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
@@ -77,28 +89,27 @@
         </div>
     </nav>
 
-        <script src="backend/JS/changePassword.js"></script>
+
     <div class="form">
         <h2>Đổi mật khẩu</h2>
-        <form method="POST" onsubmit="return changePassword()">
+        <form method="POST" onsubmit="return valFormSignUp()">
             <div>
                 <label for="">Mật khẩu cũ</label>
                 <input type="password" id="matKhauCu" name="matKhauCu">
-                <div class="error" id="matKhauCuError"><?= $matKhauCuError?></div>
+                <div class="error" id="matKhauCuError"></div>
             </div>
             <div>
-                <label for="">Mật khẩu mới</label>
+                <label for="">Mật khẩu</label>
                 <input type="password" id="matKhauMoi" name="matKhauMoi">
-                <div class="error" id="matKhauMoiError"><?= $matKhauMoiError?></div>
+                <div class="error" id="matKhauMoiError"></div>
             </div>
             <div>
                 <label for="">Nhập lại mật khẩu</label>
                 <input type="password" id="rePassword" name="nhapLaiMatKhau">
-                <div class="error" id="rePasswordError"><?= $rePassword?></div>
+                <div class="error" id="rePasswordError"></div>
             </div>
-            <button class="reg" name="btn_changePassword" style="color: black">Đổi mật khẩu</button>
+            <button class="reg" style="color: black">Đổi mật khẩu</button>
             <div id="output"></div>
-            <div id="result"></div>
         </form>
     </div>
 

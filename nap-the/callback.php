@@ -41,7 +41,6 @@ function sendDiscordMessage($webhook,$message) {
 	// Return the response from Discord (if needed)
 	return $response;
 }
-sendDiscordMessage($discord["console"],"p give AnTrc2 120");
 // sendDiscordMessage("a");
 // include(__DIR__ ."/api/config.php");
 	$validate = ValidateCallback($_POST);

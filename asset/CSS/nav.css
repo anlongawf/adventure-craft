@@ -31,6 +31,7 @@
 
 .nav-left li a {
   color: #abc1dd;
+  font-size: 13px;
 }
 .nav-left li a:hover {
   color: #5886c2;
@@ -138,27 +139,37 @@
 
   .right span {
     /* display: none; */
+    padding-top: 10px;
   }
   .right ul li {
     text-align: left;
   }
   .nav-left {
-    display: none; /* Đặt mặc định là ẩn */
+    display: none;
     margin-top: 10px;
-  }
-
-  .nav-left.active {
-    display: flex;
     flex-direction: column;
     background-color: #303447;
-    width: 240px;
-    text-align: left;
+    width: 100%;
     color: #dadce4;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     margin-top: 50px;
     margin-left: 0;
-    text-align: left;
+    padding: 6px 0px 20px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    position: absolute;
+  }
+  .nav-left:active {
+    margin-top: 10px;
+    flex-direction: column;
+    background-color: #303447;
+    width: 100%;
+    color: #dadce4;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    margin-top: 50px;
+    margin-left: 0;
     padding: 6px 0px 20px 20px;
     border-radius: 5px;
     z-index: 1000;

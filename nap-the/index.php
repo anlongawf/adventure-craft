@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(!isset($_SESSION["taiKhoan"])){
-        header("Location: ../login.php");
+        header("Location: ../login");
     }
 ?>
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
 
     <!--=== NAV ===-->
 
-    <script src="asset/JS/nav.js"></script>
+    <script src="../asset/JS/nav.js"></script>
     <nav class="nav">
         <div class="lef">
             <i class="fa-solid fa-bars menu" style="color:white">Menu</i>
@@ -43,11 +43,6 @@
                 </li>
             </ul>
             <ul class="sub-menu">
-                <li>
-                    <a href="../top/kill.php"><i class="fa-solid fa-trophy"></i> Bảng xếp hạng Kills</a>
-                </li>
-                <li>
-                    <a href="../top/die.php"><i class="fa-solid fa-medal"></i> Bảng xếp hạng Deads</a>
                 </li>
                 <li>
                     <a href="../top/point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
@@ -65,7 +60,6 @@
         <script>
         document.addEventListener('DOMContentLoaded', () => {
             checkLogin();
-            QRCode();
         });
         </script>
         <div class="right">
@@ -93,7 +87,6 @@
             </ul>
         </div>
     </nav>
-
 
 
 

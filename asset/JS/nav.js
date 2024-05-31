@@ -4,13 +4,17 @@ $(document).ready(function () {
   });
 });
 $(document).ready(function () {
-  $('.lef').click(function () {
-    $('.nav-left').toggleClass('active');
-  });
+  // Kiểm tra nếu đây là thiết bị di động
+  if ($(window).width() <= 650) {
+    // Thiết lập sự kiện click cho .lef chỉ trên thiết bị di động
+    $('.lef').click(function () {
+      $('.nav-left').slideToggle();
+    });
+  }
 });
 
 $(document).ready(function () {
   $('.top-ingame').click(function () {
-    $('.sub-menu').slideToggle();
+    $('.sub-menu').fadeToggle();
   });
 });
