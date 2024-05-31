@@ -143,7 +143,7 @@
 
             <div class="btn btn-image-secondary flex" id="minescord-wiki" onclick="copyContent()">
                 <i class="fa-solid fa-map"></i>
-                <a class="n-decoration" href="wiki/">MAP</a>
+                <a class="n-decoration" href="http://map-adventurecraft.site:25602/">MAP</a>
             </div>
         </div>
 
