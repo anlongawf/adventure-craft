@@ -21,7 +21,7 @@
     <script src="asset/JS/nav.js"></script>
     <nav class="nav">
         <div class="lef">
-            <i class="fa-solid fa-bars menu">Menu</i>
+            <i class="fa-solid fa-bars menu" style="color:white">Menu</i>
             <ul class="nav-left">
                 <li>
                     <a href="../index.php"><i class="fa-solid fa-house"></i> Trang chủ </a>
@@ -33,9 +33,24 @@
                     <a href="../nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
                 </li>
                 <li>
-                    <a href="../top/"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
+                    <a href="#" class="top-ingame"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng </a>
                 </li>
             </ul>
+            <ul class="sub-menu">
+                <li>
+                    <a href="kill.php"><i class="fa-solid fa-trophy"></i> Bảng xếp hạng Kills</a>
+                </li>
+                <li>
+                    <a href="die.php"><i class="fa-solid fa-medal"></i> Bảng xếp hạng Deads</a>
+                </li>
+                <li>
+                    <a href="point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
+                </li>
+                <li>
+                    <a href="money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
+                </li>
+            </ul>
+
         </div>
         <script src="../backend/JS/check-login2.js"></script>
         <script>
@@ -73,7 +88,7 @@
         <h1>Bảng xếp hạng </h1>
         <table>
             <thead>
-            <tr>
+                <tr>
                     <th>Số thứ tự</th>
                     <th>Người chơi</th>
                     <th>Xu</th>
@@ -84,13 +99,13 @@
                     require_once "../backend/PHP/function.php";
                     $result = sqlCommand("playerpoints","select DISTINCT ROW_NUMBER() OVER(ORDER BY points DESC) AS ranking, playerpoints_points.points, playerpoints_username_cache.username name from playerpoints_points join playerpoints_username_cache on playerpoints_username_cache.uuid = playerpoints_points.uuid order by points desc limit 4")->fetchAll();
                 ?>
-                <?php foreach ($result as $value) :?>
-                    <tr>
-                        <td><?= $value["ranking"]?></td>
-                        <td><?= $value['name']?></td>
-                        <td><?= $value['points']?></td>
-                        <td>
-                        <?php
+            <?php foreach ($result as $value) :?>
+            <tr>
+                <td><?= $value["ranking"]?></td>
+                <td><?= $value['name']?></td>
+                <td><?= $value['points']?></td>
+                <td>
+                    <?php
                             $output = sqlCommand("playerpoints","SELECT DISTINCT points FROM playerpoints_points ORDER BY points DESC LIMIT 4")->fetchAll();
                             $listMoney = [];
                             foreach ($output as $item){
@@ -110,9 +125,9 @@
 
                             
                         ?>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
         </table>
     </div>
 </body>

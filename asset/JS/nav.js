@@ -5,6 +5,12 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   $('.lef').click(function () {
-    $('.nav-left').toggleClass('active'); // Thêm hoặc loại bỏ class .active
+    $('.nav-left').toggleClass('active');
+  });
+});
+
+$(document).ready(function () {
+  $('.top-ingame').click(function () {
+    $('.sub-menu').slideToggle();
   });
 });

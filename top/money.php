@@ -21,7 +21,7 @@
     <script src="asset/JS/nav.js"></script>
     <nav class="nav">
         <div class="lef">
-            <i class="fa-solid fa-bars menu">Menu</i>
+            <i class="fa-solid fa-bars menu" style="color:white">Menu</i>
             <ul class="nav-left">
                 <li>
                     <a href="../index.php"><i class="fa-solid fa-house"></i> Trang chủ </a>
@@ -33,9 +33,24 @@
                     <a href="../nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
                 </li>
                 <li>
-                    <a href="index.php"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
+                    <a href="#" class="top-ingame"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng </a>
                 </li>
             </ul>
+            <ul class="sub-menu">
+                <li>
+                    <a href="kill.php"><i class="fa-solid fa-trophy"></i> Bảng xếp hạng Kills</a>
+                </li>
+                <li>
+                    <a href="die.php"><i class="fa-solid fa-medal"></i> Bảng xếp hạng Deads</a>
+                </li>
+                <li>
+                    <a href="point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
+                </li>
+                <li>
+                    <a href="money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
+                </li>
+            </ul>
+
         </div>
         <script src="../backend/JS/check-login2.js"></script>
         <script>
@@ -87,11 +102,11 @@
                     $result = sqlCommand("coinsengine","SELECT ce.*, @ranking := @ranking + 1 AS ranking FROM coinsengine_users ce JOIN (SELECT DISTINCT money FROM coinsengine_users ORDER BY money DESC LIMIT 10) AS top_money ON ce.money = top_money.money JOIN (SELECT @ranking := 0) r ORDER BY ce.money DESC")->fetchAll();
                 ?>
                 <?php foreach ($result as $value) :?>
-                    <tr>
-                        <td><?= $value["ranking"]?></td>
-                        <td><?= $value['name']?></td>
-                        <td><?= $value['money']?></td>
-                        <td><?php
+                <tr>
+                    <td><?= $value["ranking"]?></td>
+                    <td><?= $value['name']?></td>
+                    <td><?= $value['money']?></td>
+                    <td><?php
                             $output = sqlCommand("coinsengine","SELECT DISTINCT money FROM coinsengine_users ORDER BY money DESC LIMIT 10")->fetchAll();
                             $listMoney = [];
                             foreach ($output as $item){
@@ -111,7 +126,7 @@
 
                             
                         ?></td>
-                    </tr>
+                </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
