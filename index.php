@@ -89,7 +89,7 @@
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
                 </li>
                 <li>
-                    <a  class="top-ingame"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng </a>
+                    <a href="#" class="top-ingame"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng </a>
                 </li>
             </ul>
             <ul class="sub-menu">

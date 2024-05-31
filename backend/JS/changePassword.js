@@ -19,7 +19,6 @@ function changePassword(){
     var rePasswordError = document.getElementById("rePasswordError");
     var error =0;
     var output= document.getElementById("output");
-    var result = document.getElementById("result");
     if (newPassword === "") {
       newPasswordError.innerText = "Bạn phải nhập mật khẩu mới";
       error++;
@@ -54,13 +53,22 @@ function changePassword(){
         oldPasswordError.innerText = "Mật khẩu mới và mật khẩu cũ không được giống nhau";
         newPasswordError.innerText = "Mật khẩu mới và mật khẩu cũ không được giống nhau";
         error++;
+        
       } else {
+        oldPasswordError.innerText = "";
+        newPasswordError.innerText = "";
         if (error === 0) {
           sendHttpRequest("backend/PHP/checkPassword.php","POST",`password=${oldPassword}`,function(res){
             if (!res){
               output.innerText = "Đổi mật khẩu thất bại";
             } else {
-              window.location.href = "/";
+              sendHttpRequest("backend/PHP/changePassword.php","POST",`changePassword=${newPassword}`,function(res){
+                if (res){
+                  window.location.href = "login.php";
+                } else {
+                  alert("Lỗi máy chủ");
+                }
+              })
             }
         })
         }
@@ -68,5 +76,6 @@ function changePassword(){
       
         
     }
+    console.log(error);
     return false
 }

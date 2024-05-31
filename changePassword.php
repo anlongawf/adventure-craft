@@ -89,10 +89,10 @@
         </div>
     </nav>
 
-
+        <script src="backend/JS/changePassword.js"></script>
     <div class="form">
         <h2>Đổi mật khẩu</h2>
-        <form method="POST" onsubmit="return valFormSignUp()">
+        <form method="POST" onsubmit="return changePassword()">
             <div>
                 <label for="">Mật khẩu cũ</label>
                 <input type="password" id="matKhauCu" name="matKhauCu">
