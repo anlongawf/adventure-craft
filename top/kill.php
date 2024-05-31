@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../asset/CSS/nav.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Thêm thư viện jQuery -->
-    <link rel="shortcut icon" href="../asset/IMG/logo.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="../asset/fonts/fontawesome-free-6.5.2-web/css/all.css" />
+    <link rel="shortcut icon" href="../asset/IMG/logo.jpeg" type="image/x-icon">
     <script src="../asset/JS/nav.js"></script>
     <link rel="stylesheet" href="style.css">
 
@@ -88,13 +88,14 @@
     </nav>
 
     <div class="main">
-        <h1>Bảng xếp hạng cấp độ</h1>
+        <h1>Bảng xếp hạng Kills</h1>
         <table>
             <thead>
                 <tr>
                     <th>Bảng xếp hạng</th>
                     <th>Người chơi</th>
                     <th>Cấp độ</th>
+                    <th>Xu</th>
                 </tr>
             </thead>
             <tbody>
@@ -102,11 +103,13 @@
                     <td>1</td>
                     <td>John Doe</td>
                     <td>10</td>
+                    <td>1</td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Jane Smith</td>
                     <td>8</td>
+                    <td>80</td>
                 </tr>
             </tbody>
         </table>

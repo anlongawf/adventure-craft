@@ -53,7 +53,7 @@
         </script>
         <div class="right">
             <span id="user" class="username">Đăng nhập</span>
-            <img src="asset/IMG/avatar.png" alt="" class="avatar">
+            <img id="avt" src="asset/IMG/avatar.png" alt="" class="avatar">
             <ul class="nav-right">
                 <li>
                     <a  href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
@@ -77,27 +77,28 @@
         </div>
     </nav>
 
-
+        <script src="backend/JS/changePassword.js"></script>
     <div class="form">
         <h2>Đổi mật khẩu</h2>
-        <form method="POST" onsubmit="return valFormSignUp()">
+        <form method="POST" onsubmit="return changePassword()">
             <div>
                 <label for="">Mật khẩu cũ</label>
                 <input type="password" id="matKhauCu" name="matKhauCu">
-                <div class="error" id="matKhauCuError"></div>
+                <div class="error" id="matKhauCuError"><?= $matKhauCuError?></div>
             </div>
             <div>
-                <label for="">Mật khẩu</label>
+                <label for="">Mật khẩu mới</label>
                 <input type="password" id="matKhauMoi" name="matKhauMoi">
-                <div class="error" id="matKhauMoiError"></div>
+                <div class="error" id="matKhauMoiError"><?= $matKhauMoiError?></div>
             </div>
             <div>
                 <label for="">Nhập lại mật khẩu</label>
                 <input type="password" id="rePassword" name="nhapLaiMatKhau">
-                <div class="error" id="rePasswordError"></div>
+                <div class="error" id="rePasswordError"><?= $rePassword?></div>
             </div>
-            <button class="reg" style="color: black">Đổi mật khẩu</button>
+            <button class="reg" name="btn_changePassword" style="color: black">Đổi mật khẩu</button>
             <div id="output"></div>
+            <div id="result"></div>
         </form>
     </div>
 
