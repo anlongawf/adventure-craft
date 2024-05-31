@@ -37,20 +37,15 @@
                 </li>
             </ul>
             <ul class="sub-menu">
-                <li>
-                    <a href="kill.php"><i class="fa-solid fa-trophy"></i> Bảng xếp hạng Kills</a>
                 </li>
                 <li>
-                    <a href="die.php"><i class="fa-solid fa-medal"></i> Bảng xếp hạng Deads</a>
+                    <a href="../top/point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
                 </li>
                 <li>
-                    <a href="point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
+                    <a href="../top/money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
                 </li>
                 <li>
-                    <a href="money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
-                </li>
-                <li>
-                    <a href="level.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng cấp độ</a>
+                    <a href="../top/level.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng cấp độ</a>
                 </li>
             </ul>
 
