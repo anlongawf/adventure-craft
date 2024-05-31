@@ -39,13 +39,13 @@
             <ul class="sub-menu">
                 </li>
                 <li>
-                    <a href="../top/point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
+                    <a href="point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
                 </li>
                 <li>
-                    <a href="../top/money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
+                    <a href="money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
                 </li>
                 <li>
-                    <a href="../top/level.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng cấp độ</a>
+                    <a href="level.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng cấp độ</a>
                 </li>
             </ul>
 

@@ -37,15 +37,20 @@
                 </li>
             </ul>
             <ul class="sub-menu">
+                <!-- <li>
+                    <a href="kill.php"><i class="fa-solid fa-trophy"></i> Bảng xếp hạng Kills</a>
                 </li>
                 <li>
-                    <a href="../top/point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
+                    <a href="die.php"><i class="fa-solid fa-medal"></i> Bảng xếp hạng Deads</a>
+                </li> -->
+                <li>
+                    <a href="point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
                 </li>
                 <li>
-                    <a href="../top/money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
+                    <a href="money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
                 </li>
                 <li>
-                    <a href="../top/level.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng cấp độ</a>
+                    <a href="level.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng cấp độ</a>
                 </li>
             </ul>
 
@@ -64,7 +69,7 @@
                     <a href="../profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
+                    <a href="../nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
                 </li>
                 <li id="changePassword">
                     <a href="../changePassword.php"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
