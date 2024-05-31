@@ -31,7 +31,7 @@
     <script src="asset/JS/nav.js"></script>
     <nav class="nav">
         <div class="lef">
-            <i class="fa-solid fa-bars menu">Menu</i>
+            <i class="fa-solid fa-bars menu" style="color:white">Menu</i>
             <ul class="nav-left">
                 <li>
                     <a href="index.php"><i class="fa-solid fa-house"></i> Trang chủ </a>
@@ -43,7 +43,7 @@
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
                 </li>
                 <li>
-                    <a href="top/"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
+                    <a href="/top/"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
                 </li>
             </ul>
         </div>
@@ -58,7 +58,7 @@
             <img src="asset/IMG/avatar.png" alt="" class="avatar">
             <ul class="nav-right">
                 <li>
-                    <a  href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
+                    <a href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
                 </li>
                 <li>
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>

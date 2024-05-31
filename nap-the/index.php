@@ -27,7 +27,7 @@
     <script src="asset/JS/nav.js"></script>
     <nav class="nav">
         <div class="lef">
-            <i class="fa-solid fa-bars menu">Menu</i>
+            <i class="fa-solid fa-bars menu" style="color:white">Menu</i>
             <ul class="nav-left">
                 <li>
                     <a href="../index.php"><i class="fa-solid fa-house"></i> Trang chủ </a>
@@ -39,14 +39,31 @@
                     <a href="../nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
                 </li>
                 <li>
-                    <a href="../top/"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
+                    <a href="#" class="top-ingame"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng </a>
                 </li>
             </ul>
+            <ul class="sub-menu">
+                <li>
+                    <a href="../top/kill.php"><i class="fa-solid fa-trophy"></i> Bảng xếp hạng Kills</a>
+                </li>
+                <li>
+                    <a href="../top/die.php"><i class="fa-solid fa-medal"></i> Bảng xếp hạng Deads</a>
+                </li>
+                <li>
+                    <a href="../top/point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
+                </li>
+                <li>
+                    <a href="../top/money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
+                </li>
+                <li>
+                    <a href="../top/level.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng cấp độ</a>
+                </li>
+            </ul>
+
         </div>
         <script src="../backend/JS/check-login2.js"></script>
         <script>
         document.addEventListener('DOMContentLoaded', () => {
-            QRCode();
             checkLogin();
         });
         </script>
@@ -162,7 +179,7 @@
                                 <td colspan="2">
                                     <!-- Sử dụng colspan để trải rộng qua cả cột -->
                                     <div id="qrCode" class="qrCode" style="height: 200px;"></div>
-                                    
+
                                 </td>
                             </tr>
                             <tr>

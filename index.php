@@ -80,35 +80,20 @@
             <i class="fa-solid fa-bars menu" style="color:white">Menu</i>
             <ul class="nav-left">
                 <li>
-                    <a href="../index.php"><i class="fa-solid fa-house"></i> Trang chủ </a>
+                    <a href="index.php"><i class="fa-solid fa-house"></i> Trang chủ </a>
                 </li>
                 <li>
-                    <a href="../shop.php"><i class="fa-solid fa-shop"></i> Cửa hàng</a>
+                    <a href="shop.php"><i class="fa-solid fa-shop"></i> Cửa hàng</a>
                 </li>
                 <li>
-                    <a href="../nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
+                    <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
                 </li>
                 <li>
-                    <a href="#" class="top-ingame"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng </a>
+                    <a href="/top/"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
                 </li>
             </ul>
-            <ul class="sub-menu">
-                <li>
-                    <a href="kill.php"><i class="fa-solid fa-trophy"></i> Bảng xếp hạng Kills</a>
-                </li>
-                <li>
-                    <a href="die.php"><i class="fa-solid fa-medal"></i> Bảng xếp hạng Deads</a>
-                </li>
-                <li>
-                    <a href="point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
-                </li>
-                <li>
-                    <a href="money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
-                </li>
-            </ul>
-
         </div>
-        <script src="../backend/JS/check-login2.js"></script>
+        <script src="backend/JS/check-login.js"></script>
         <script>
         document.addEventListener('DOMContentLoaded', () => {
             checkLogin();
@@ -116,25 +101,25 @@
         </script>
         <div class="right">
             <span id="user" class="username">Đăng nhập</span>
-            <img src="../asset/IMG/avatar.png" alt="" class="avatar">
+            <img src="asset/IMG/avatar.png" alt="" class="avatar">
             <ul class="nav-right">
                 <li>
-                    <a href="../profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
+                    <a href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
+                    <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
                 </li>
                 <li id="changePassword">
-                    <a href="../changePassword.php"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
+                    <a href="changePassword.php"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
                 </li>
                 <li id="login">
-                    <a href="../login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
+                    <a href="login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
                 </li>
                 <li id="sign-up">
-                    <a href="../sign-up.php"><i class="fa-solid fa-registered"></i>Đăng ký</a>
+                    <a href="sign-up.php"><i class="fa-solid fa-registered"></i>Đăng ký</a>
                 </li>
                 <li id="sign-out">
-                    <a href="../logout.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
+                    <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
                 </li>
             </ul>
         </div>

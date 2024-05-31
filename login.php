@@ -40,7 +40,7 @@
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
                 </li>
                 <li>
-                    <a href="top/"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
+                    <a href="/top/"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng</a>
                 </li>
             </ul>
         </div>
@@ -55,7 +55,7 @@
             <img src="asset/IMG/avatar.png" alt="" class="avatar">
             <ul class="nav-right">
                 <li>
-                    <a  href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
+                    <a href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
                 </li>
                 <li>
                     <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>

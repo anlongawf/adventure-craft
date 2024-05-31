@@ -35,6 +35,7 @@
                 <li>
                     <a href="#" class="top-ingame"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng </a>
                 </li>
+
             </ul>
             <ul class="sub-menu">
                 <li>
@@ -48,6 +49,9 @@
                 </li>
                 <li>
                     <a href="money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
+                </li>
+                <li>
+                    <a href="level.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng cấp độ</a>
                 </li>
             </ul>
 
