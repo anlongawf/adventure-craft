@@ -10,6 +10,9 @@
             $pet = $this->productModel->listPet();
             $rank = $this->productModel->listRank();
             require_once "views/dashboard.php";
+            if (isset($_SESSION['taiKhoan'])){
+                header("Location: ../");
+            }
         }
         // function listProduct(){
         //     $listProduct = $this->productModel->listProduct();

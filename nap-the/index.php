@@ -60,6 +60,7 @@
         <script>
         document.addEventListener('DOMContentLoaded', () => {
             checkLogin();
+            QRCode();
         });
         </script>
         <div class="right">
