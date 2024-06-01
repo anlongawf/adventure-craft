@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(!isset($_SESSION["taiKhoan"])){
-        header("Location: ../login");
+        header("Location: ../login.php");
     }
 ?>
 <!DOCTYPE html>

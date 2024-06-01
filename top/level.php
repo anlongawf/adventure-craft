@@ -87,22 +87,53 @@
         <table>
             <thead>
                 <tr>
-                    <th>Bảng xếp hạng</th>
+                    <th>Số thứ tự</th>
                     <th>Người chơi</th>
                     <th>Cấp độ</th>
+                    <th>Top</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>John Doe</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jane Smith</td>
-                    <td>8</td>
-                </tr>
+                <?php
+                    require_once "../backend/PHP/function.php";
+                    $listUUID = sqlCommand("playerpoints","select * from playerpoints_username_cache")->fetchAll();
+                    $result = sqlCommand("mmocore","select DISTINCT ROW_NUMBER() OVER(ORDER BY level DESC) AS ranking, uuid, level from  mmocore_playerdata order by level desc limit 10")->fetchAll();
+                    $mergedArray = [];
+
+                    
+                ?>
+                <?php foreach ($result as $value):?>
+                    <tr>
+                        <td><?= $value['ranking']?></td>
+                        <td><?php
+                            foreach ($listUUID as $item){
+                                if ($item['uuid'] === $value["uuid"]){
+                                    echo $item['username'];
+                                    break;
+                                }
+                            }
+                        ?></td>
+                        <td><?= $value['level']?></td>
+                        <td><?php
+                            $output = sqlCommand("mmocore","select DISTINCT level from mmocore_playerdata order by level desc limit 10")->fetchAll();
+                            $listLevel = [];
+                            foreach($output as $item){
+                                $listLevel[] = $item['level'];
+                            }
+                            $top =1;
+                            $rank;
+                            foreach($listLevel as $rows){
+                                if ($rows === $value['level']){
+                                    $rank = $top;
+                                    echo "<span class='top-$top'>$rank</span>";
+                                } else {
+                                    $top++;
+                                }
+                            }
+                        
+                        ?></td>
+                    </tr>    
+                <?php endforeach?>
             </tbody>
         </table>
     </div>

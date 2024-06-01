@@ -95,7 +95,7 @@
             </thead>
             <?php
                     require_once "../backend/PHP/function.php";
-                    $result = sqlCommand("playerpoints","select DISTINCT ROW_NUMBER() OVER(ORDER BY points DESC) AS ranking, playerpoints_points.points, playerpoints_username_cache.username name from playerpoints_points join playerpoints_username_cache on playerpoints_username_cache.uuid = playerpoints_points.uuid order by points desc limit 4")->fetchAll();
+                    $result = sqlCommand("playerpoints","select DISTINCT ROW_NUMBER() OVER(ORDER BY points DESC) AS ranking, playerpoints_points.points, playerpoints_username_cache.username name from playerpoints_points join playerpoints_username_cache on playerpoints_username_cache.uuid = playerpoints_points.uuid order by points desc limit 50")->fetchAll();
                 ?>
             <?php foreach ($result as $value) :?>
             <tr>
@@ -104,7 +104,7 @@
                 <td><?= $value['points']?></td>
                 <td>
                     <?php
-                            $output = sqlCommand("playerpoints","SELECT DISTINCT points FROM playerpoints_points ORDER BY points DESC LIMIT 4")->fetchAll();
+                            $output = sqlCommand("playerpoints","SELECT DISTINCT points FROM playerpoints_points ORDER BY points DESC LIMIT 50")->fetchAll();
                             $listMoney = [];
                             foreach ($output as $item){
                                 $listMoney[] = $item["points"];

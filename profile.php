@@ -3,6 +3,7 @@
     if(!isset($_SESSION["taiKhoan"])){
         header("Location: login.php");
     }
+    require_once "backend/PHP/function.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,24 +93,32 @@
     </nav>
 
 
-
+    <?php
+        $user = $_SESSION['taiKhoan'];
+        $money = sqlCommand("coinsengine","SELECT money FROM coinsengine_users where name = '$user'")->fetch();
+        $point = sqlCommand("playerpoints","SELECT points,playerpoints_points.uuid from playerpoints_points JOIN playerpoints_username_cache ON playerpoints_points.uuid = playerpoints_username_cache.uuid WHERE username = '$user'")->fetch();
+        $uuid = $point['uuid'];
+        $mmocore = sqlCommand("mmocore","SELECT level, class FROM mmocore_playerdata where uuid = '$uuid'")->fetch();
+        $level = $mmocore['level'];
+        $class = $mmocore['class'];
+    ?>
     <div class="main">
         <div class="profile">
             <div class="av-name">
                 <img src="asset/IMG/avatar.png" alt="" class="profile" />
-                <h1 class="name">David Phanns</h1>
+                <h1 class="name"><?= $user?></h1>
                 <div class="infor">
                     <div class="rank-xu">
                         <p class="rank">Rank: Kim cương</p>
 
                     </div>
                     <div class="mmcore">
-                        <p class="class">Nghề: Archer</p>
-                        <p class="level">Cấp độ: 100</p>
+                        <p class="class">Nghề: <?= $class?> </p>
+                        <p class="level">Cấp độ: <?= $level?></p>
                     </div>
                     <div class="eco">
-                        <p class="xu">Xu: 1000</p>
-                        <p class="money">Bạc: 1000</p>
+                        <p class="xu">Xu: <?= $point['points']?></p>
+                        <p class="money">Bạc: <?= $money['money']?></p>
                     </div>
                 </div>
             </div>

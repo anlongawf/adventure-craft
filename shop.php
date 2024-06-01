@@ -30,14 +30,10 @@
 
     <title>Adventure Craft - Shop</title>
     <script src="backend/JS/shop.js"></script>
-    <script src="backend/JS/check-point.js"></script>
     <script src="backend/JS/check-login.js"></script>
-    <script src="backend/JS/check-username.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         checkLogin();
-        checkPoint("point");
-        checkUsername("name-user");
     });
     </script>
     <script src="asset/JS/nav.js"></script>
