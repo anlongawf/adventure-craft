@@ -9,6 +9,10 @@
     <?php require_once "views/component/navbar.php" ?>
     <div>
         <div>
+            <button><a href="">Thêm rank</a></button>
+            <button><a href="">Thêm pet</a></button>
+        </div>
+        <div>
             <h1>Danh sách Rank</h1>
         </div>
         <table>
@@ -18,6 +22,9 @@
                 <th>Ảnh</th>
                 <th>Group</th>
                 <th>Giá</th>
+                <th>Quyền lợi</th>
+                <th>Sửa</th>
+                <th>Xóa</th>
             </tr>
             <?php foreach ($rank as $value):?>
                 <tr>
@@ -41,6 +48,8 @@
                     <th>Cưỡi</th>
                     <th>Bay</th>
                     <th>Quyền</th>
+                    <th>Sửa</th>
+                    <th>Xóa</th>
                 </tr>
                 <?php foreach($pet as $item):?>
                     <tr>

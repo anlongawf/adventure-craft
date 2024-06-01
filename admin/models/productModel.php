@@ -7,10 +7,10 @@
             $this->conn = connectDatabase();
         }
         function listPet(){
-            return $this->conn->query("SELECT * FROM shopPet")->fetchAll();
+            return $this->conn->query("SELECT * FROM shoppet")->fetchAll();
         }
         function listRank(){
-            return $this->conn->query("SELECT * FROM shopRank")->fetchAll();
+            return $this->conn->query("SELECT * FROM shoprank")->fetchAll();
         }
     }
 
