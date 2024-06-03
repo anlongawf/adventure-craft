@@ -73,8 +73,9 @@
 
 <body>
     <!--=== NAV ===-->
+    <?php require_once "components/navbar.php"?>
 
-    <script src="asset/JS/nav.js"></script>
+    <!-- <script src="asset/JS/nav.js"></script>
     <nav class="nav">
         <div class="lef">
             <i class="fa-solid fa-bars menu" style="color:white">Menu</i>
@@ -135,7 +136,7 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
 
 
     <!--=== Header ===-->

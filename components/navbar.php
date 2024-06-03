@@ -1,33 +1,10 @@
-<?php
-    session_start();
-    if(!isset($_SESSION["taiKhoan"])){
-        header("Location: login.php");
-    }
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="asset/CSS/sign-up.css">
+<link rel="stylesheet" href="asset/CSS/default.css" />
+    <link rel="stylesheet" href="asset/CSS/index.css" />
     <link rel="stylesheet" href="asset/CSS/nav.css">
-    <link rel="stylesheet" href="asset/CSS/nav-mobile.css">
+    <link rel="stylesheet" href="CSS/Components/animations.css" />
     <link rel="stylesheet" href="asset/fonts/fontawesome-free-6.5.2-web/css/all.css" />
-    <link rel="shortcut icon" href="asset/IMG/logo.jpeg" type="image/x-icon" />
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
-    <title>Adventure Craft - Đăng kí!</title>
-</head>
-
-<body>
-
-    <!--=== NAV ===-->
-    <?php require_once "components/navbar.php" ?>
-
-    <!-- <script src="asset/JS/nav.js"></script>
+    <script src="asset/JS/nav.js"></script>
     <nav class="nav">
         <div class="lef">
             <i class="fa-solid fa-bars menu" style="color:white">Menu</i>
@@ -88,33 +65,5 @@
                 </li>
             </ul>
         </div>
-    </nav> -->
-
-        <script src="backend/JS/changePassword.js"></script>
-    <div class="form">
-        <h2>Đổi mật khẩu</h2>
-        <form method="POST" onsubmit="return changePassword()">
-            <div>
-                <label for="">Mật khẩu cũ</label>
-                <input type="password" id="matKhauCu" name="matKhauCu">
-                <div class="error" id="matKhauCuError"></div>
-            </div>
-            <div>
-                <label for="">Mật khẩu</label>
-                <input type="password" id="matKhauMoi" name="matKhauMoi">
-                <div class="error" id="matKhauMoiError"></div>
-            </div>
-            <div>
-                <label for="">Nhập lại mật khẩu</label>
-                <input type="password" id="rePassword" name="nhapLaiMatKhau">
-                <div class="error" id="rePasswordError"></div>
-            </div>
-            <button class="reg" style="color: black">Đổi mật khẩu</button>
-            <div id="output"></div>
-        </form>
-    </div>
-
-    </div>
-</body>
-
-</html>
+    </nav>
+</head>
