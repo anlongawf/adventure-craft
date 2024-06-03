@@ -20,7 +20,7 @@
                     <td><label>Ảnh</label></td>
                     <td><input type="file" name="img"></td>
                 </tr>
-                <img src="../asset/img-ranks/<?= $updateRank['rank_img']?>" alt="">
+                <img width="100px" src="../asset/img-ranks/<?= $updateRank['rank_img']?>" alt="">
                 <tr>
                     <td><label>Group</label></td>
                     <td><input type="text" value="<?= $updateRank['rank_group']?>" name="group"></td>

@@ -15,6 +15,8 @@
         $rank->updateRank($_GET['id']);
     } elseif ($act === "delete-rank"){
         $rank->deleteRank($_GET['id']);
+    } elseif ($act === 'insert-rank'){
+        $rank->insertRank();
     }
      else {
         header("Location: ../");

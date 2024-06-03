@@ -27,9 +27,9 @@
                 } else {
                     $img = $_FILES["img"]['name'];
                     $tmp = $_FILES["img"]["tmp_name"];
+
                     move_uploaded_file($tmp,"../asset/img-ranks/".$img);
                 }
-                var_dump($format_quyenLoi);
                 $this->rank->updateRank($id,$nameRank,$img,$group,$price,$format_quyenLoi);
 
             }
@@ -40,9 +40,30 @@
             var_dump($deleteRank);
             echo "<br>";
             var_dump($group);
-            // $this->rank->deleteRank($id,$group);
-            // header("Location: ?act=/");
+            $this->rank->deleteRank($id,$group);
+            header("Location: ?act=/");
             
+        }
+        function insertRank(){
+            require_once "views/insertRank.php";
+            if (isset($_POST['btn_insertRank'])){
+                $nameRank = $_POST['nameRank'];
+                $group = $_POST['group'];
+                $price = $_POST['price'];
+                if (empty($_FILES["img"]['name'])){
+                    $img = '';
+                } else {
+                    $img = $_FILES["img"]['name'];
+                    $tmp = $_FILES["img"]["tmp_name"];
+
+                    move_uploaded_file($tmp,"../asset/img-ranks/".$img);
+                }
+                if($this->rank->insertRank($nameRank,$group,$price,$img)){
+                    header("Location: ?act=/");
+                } else {
+                    echo "Lỗi";
+                }
+            }
         }
         
     }

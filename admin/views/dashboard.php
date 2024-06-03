@@ -15,7 +15,7 @@
         <div>
             <h1>Danh sách Rank</h1>
         </div>
-        <table>
+        <table border="1">
             <tr>
                 <th>ID</th>
                 <th>Tên rank</th>
@@ -30,7 +30,7 @@
                 <tr>
                     <td><?= $value['rank_id']?></td>
                     <td><?= $value['rank_nameRank']?></td>
-                    <td><img src="<?= $value['rank_img']?>" alt=""></td>
+                    <td><img width="100px" src="../asset/img-ranks/<?= $value['rank_img']?>" alt=""></td>
                     <td><?= $value["rank_group"]?></td>
                     <td><?= $value['rank_price']?></td>
                     <td>
