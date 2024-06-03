@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <?php require_once "views/component/navbar.php" ?>
+    <?php require_once "views/components/navbar.php" ?>
     <div>
         <div>
-            <button><a href="">Thêm rank</a></button>
-            <button><a href="">Thêm pet</a></button>
+            <button><a href="?act=insert-rank">Thêm rank</a></button>
+            <button><a href="?act=insert-pet">Thêm pet</a></button>
         </div>
         <div>
             <h1>Danh sách Rank</h1>
@@ -33,6 +33,21 @@
                     <td><img src="<?= $value['rank_img']?>" alt=""></td>
                     <td><?= $value["rank_group"]?></td>
                     <td><?= $value['rank_price']?></td>
+                    <td>
+                        <?php
+                            require_once "commons/function.php";
+                            $group = $value["rank_group"];
+                            $quyenLoi = connectDatabase()->query("SELECT quyen_loi FROM quyenloi where rank_group = '$group'")->fetchAll();
+                            foreach ($quyenLoi as $item){
+                                echo "<p>".$item['quyen_loi']."</p>";
+                            }
+                                
+                        
+                        ?>
+                        
+                    </td>
+                    <td><button><a href="?act=update-rank&id=<?= $value['rank_id']?>">Sửa</a></button></td>
+                    <td><button onclick="return confirm('Bạn có chắc chắn muốn xóa không?????')"><a href="?act=delete-rank&id=<?= $value['rank_id']?>">Xóa</a></button></td>
                 </tr>
             <?php endforeach;?>
         </table>
@@ -61,11 +76,13 @@
                         <td><?= $item['pet_canRide']?></td>
                         <td><?= $item['pet_canFly']?></td>
                         <td><?= $item['pet_permission']?></td>
+                        <td><button><a href="?act=update-pet&id=<?= $item['pet_id']?>">Sửa</a></button></td>
+                        <td><button onclick="return confirm('Bạn có chắc chắn muốn xóa không?????')"><a href="?act=delete-pet&id=<?= $item['pet_id']?>">Xóa</a></button></td>
                     </tr>
                 <?php endforeach?>
             </table>
         </div>
     </div>
-    <?php require_once "views/component/footer.php" ?>
+    <?php require_once "views/components/footer.php" ?>
 </body>
 </html>

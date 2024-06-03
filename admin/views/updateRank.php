@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php require_once "views/component/navbar.php"?>
+    <?php require_once "views/components/navbar.php" ?>
     <div>
         <form action="" method="POST" enctype="multipart/form-data">
             <input type="hidden" value="<?= $updateRank["rank_id"]?>" name="rank_id">
@@ -18,7 +18,7 @@
                 
                 <tr>
                     <td><label>Ảnh</label></td>
-                    <input type="file" name="img">
+                    <td><input type="file" name="img"></td>
                 </tr>
                 <img src="../asset/img-ranks/<?= $updateRank['rank_img']?>" alt="">
                 <tr>
@@ -31,14 +31,16 @@
                 </tr>
                 <tr>
                     <td><label>Quyền lợi</label></td>
-                    <textarea name="quyenLoi" cols="30" rows="10"><?php
-                    $benefits_string = implode("\n", $group);
-                    ?></textarea>
+                    <td><textarea name="quyenLoi" cols="30" rows="10"><?php
+                    foreach ($group as $item){
+                        echo $item['quyen_loi']."\n";
+                    }
+                    ?></textarea></td>
                 </tr>
             </table>
             <button name="btn_updateRank">Sửa</button>
         </form>
     </div>
-    <?php require_once "views/component/footer.php" ?>
+    <?php require_once "views/components/footer.php" ?>
 </body>
 </html>
