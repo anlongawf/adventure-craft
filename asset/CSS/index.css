@@ -114,6 +114,7 @@
 .feature-text p {
   margin: 20px 0px;
   font-size: 20px;
+  color: white;
 }
 
 .feature-text h1::after {
@@ -289,6 +290,7 @@
 
     .feature-text p {
       font-size: 0.875rem;
+      color: white;
     }
 
     .feature-text {
@@ -360,6 +362,7 @@
 
   .feature-content p {
     font-size: 16px;
+    color: white;
   }
 
   .feature-content h1::after {
