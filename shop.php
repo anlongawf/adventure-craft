@@ -29,7 +29,7 @@
 
 
     <title>Adventure Craft - Shop</title>
-    <script src="backend/JS/shop.js"></script>
+    <!-- <script src="backend/JS/shop.js"></script> -->
     <script src="backend/JS/check-login.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -95,7 +95,38 @@
                 <h1 class="m-desktop-title">Shop Rank</h1>
                 <h1 class="m-mobile-title">Shop Rank</h1>
             </div>
+            <?php 
+                require_once "backend/PHP/function.php";
+                $rank = sqlCommand("shop","SELECT * FROM shoprank")->fetchAll();
+                $pet = sqlCommand("shop","SELECT * FROM shoppet")->fetchAll();
+            ?>
             <div class="rank-menu" id="rank">
+                <?php foreach ($rank as $value): ?>
+            <div class="card">
+    <img src="asset/img-ranks/<?= $value['rank_img']?>" alt="Copper VIP Illustration">
+    <div class="card-content">
+        <h2><?= $value['rank_nameRank']?></h2>
+        <p>Thời gian: 30 ngày</p>
+        <h3>Quyền lợi:</h3>
+        <ul class="pms">
+            <?php
+                $group = $value['rank_group'];
+                $quyenLoi = sqlCommand("shop","SELECT quyen_loi FROM quyenloi WHERE rank_group = '$group'")->fetchAll();
+                foreach ($quyenLoi as $item):
+            ?>
+            <li>
+                <p class="desc"><?= $item['quyen_loi']?></p>
+            </li>
+            <?php endforeach ?>
+            
+        </ul>
+
+    </div>
+    <form action="" method="POST">
+        <button name="<?= $value['rank_group']?>" class="btn btn-dark" type="button"><?= $value['rank_price']?> Xu</button>
+    </form>
+        </div>
+        <?php endforeach ?>
             </div>
         </div>
         <!-- shop pet -->
@@ -104,8 +135,39 @@
             <h1 class="m-desktop-title">Shop Pet</h1>
             <h1 class="m-mobile-title">Shop Pet</h1>
         </div>
-        <div class="cards" id="pet"></div>
+            <div class="cards" id="pet">
+                <?php foreach ($pet as $value): ?>
+                <?php
+                    if ($value['pet_canRide']){
+                        $canRide = '<i class="fa-solid fa-check"></i>';
+                    } else {
+                        $canRide = '<i class="fa-solid fa-x"></i>';
+                    }
+                    if ($value['pet_canFly']){
+                        $canFly = '<i class="fa-solid fa-check"></i>';
+                    } else {
+                        $canFly = '<i class="fa-solid fa-x"></i>';
+                    }
+                    
+                    ?>
+                <div class="card">
+                <img src="asset/img-pets/<?= $value['pet_img']?>" alt="">
+                <div class="card-content">
+                    <h2><?= $value['pet_namePet']?></h2>
+                    <p><span>Skin:&nbsp;</span><span><?= $value['pet_skinAmount']?></span></p>
+                    <p><span>Thú cưỡi:&nbsp;</span><span><?= $canRide?></i></span></p>
+                    <p><span>Có thể bay:&nbsp;</span><span><?= $canFly?></span></p>
+                    <br>
+                    <p><strong><span>Giá bán:&nbsp;</span><span><?= $value['pet_price']?></span><span>&nbsp;xu</span></strong></p>
+                </div>
+                <form action="" method="POST">
+                <button name="<?= $value['pet_namePet']?>" class="buy-button btn btn-dark" type="button">Mua</button>
+                </form>
+                
+            </div>
+            <?php endforeach ?>
         </div>
+    </div>
     </main>
     <!--=== Popups Overlay ===-->
 
