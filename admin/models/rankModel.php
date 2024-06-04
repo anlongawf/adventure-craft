@@ -30,7 +30,6 @@
         function deleteRank($id,$group){
             $this->conn->prepare("DELETE FROM shoprank WHERE rank_id = '$id'")->execute();
             $this->conn->prepare("DELETE FROM quyenloi WHERE rank_group = '$group'")->execute();
-            // header("Location: ?act=/");
         }
         function insertRank($nameRank,$group,$price,$img){
             return $this->conn->prepare("INSERT INTO shoprank(rank_nameRank,rank_img,rank_group,rank_price) VALUES('$nameRank','$img','$group',$price)")->execute();

@@ -35,11 +35,7 @@
             }
         }
         function deleteRank($id){
-            $deleteRank = $this->rank->findProductById($id);
             $group = $this->rank->findProductById($id)["rank_group"];
-            var_dump($deleteRank);
-            echo "<br>";
-            var_dump($group);
             $this->rank->deleteRank($id,$group);
             header("Location: ?act=/");
             

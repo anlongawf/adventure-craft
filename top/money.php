@@ -102,7 +102,7 @@
             <tbody>
                 <?php
                     require_once "../backend/PHP/function.php";
-                    $result = sqlCommand("coinsengine","SELECT ce.*, @ranking := @ranking + 1 AS ranking FROM coinsengine_users ce JOIN (SELECT DISTINCT money FROM coinsengine_users ORDER BY money DESC LIMIT 10) AS top_money ON ce.money = top_money.money JOIN (SELECT @ranking := 0) r ORDER BY ce.money DESC")->fetchAll();
+                    $result = sqlCommand("coinsengine","SELECT ce.*, @ranking := @ranking + 1 AS ranking FROM coinsengine_users ce JOIN (SELECT DISTINCT money FROM coinsengine_users ORDER BY money DESC LIMIT 50) AS top_money ON ce.money = top_money.money JOIN (SELECT @ranking := 0) r ORDER BY ce.money DESC")->fetchAll();
                 ?>
                 <?php foreach ($result as $value) :?>
                 <tr>
@@ -110,7 +110,7 @@
                     <td><?= $value['name']?></td>
                     <td><?= $value['money']?></td>
                     <td><?php
-                            $output = sqlCommand("coinsengine","SELECT DISTINCT money FROM coinsengine_users ORDER BY money DESC LIMIT 10")->fetchAll();
+                            $output = sqlCommand("coinsengine","SELECT DISTINCT money FROM coinsengine_users ORDER BY money DESC LIMIT 50")->fetchAll();
                             $listMoney = [];
                             foreach ($output as $item){
                                 $listMoney[] = $item["money"];

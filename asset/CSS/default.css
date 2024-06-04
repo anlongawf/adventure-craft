@@ -14,7 +14,7 @@
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   scroll-behavior: smooth;
-  color: var(--primary-text-color);
+  /* color: var(--primary-text-color); */
 }
 
 .flex {

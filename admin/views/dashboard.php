@@ -70,7 +70,7 @@
                     <tr>
                         <td><?= $item['pet_id']?></td>
                         <td><?= $item['pet_namePet']?></td>
-                        <td><img src="<?= $item['pet_img']?>" alt=""></td>
+                        <td><img width="100px" src="../asset/img-pets/<?= $item['pet_img']?>" alt=""></td>
                         <td><?= $item['pet_price']?></td>
                         <td><?= $item['pet_skinAmount']?></td>
                         <td><?= $item['pet_canRide']?></td>
