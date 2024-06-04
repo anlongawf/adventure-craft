@@ -79,30 +79,6 @@
             checkLogin();
         });
         </script>
-        <div class="right">
-            <span id="user" class="username">Đăng nhập</span>
-            <img src="asset/IMG/avatar.png" alt="" class="avatar">
-            <ul class="nav-right">
-                <li>
-                    <a href="profile.php"> <i class="fa-solid fa-user"></i>Thông tin </a>
-                </li>
-                <li>
-                    <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i> Nạp thẻ </a>
-                </li>
-                <li id="changePassword">
-                    <a href="changePassword.php"><i class="fa-solid fa-rotate-right"></i>Đổi mật khẩu </a>
-                </li>
-                <li id="login">
-                    <a href="login.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng nhập</a>
-                </li>
-                <li id="sign-up">
-                    <a href="sign-up.php"><i class="fa-solid fa-registered"></i>Đăng ký</a>
-                </li>
-                <li id="sign-out">
-                    <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
-                </li>
-            </ul>
-        </div>
     </nav>
     <!--=== Header ===-->
     <header class="header header-text">

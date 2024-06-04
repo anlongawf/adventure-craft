@@ -1,9 +1,9 @@
 <head>
-<link rel="stylesheet" href="asset/CSS/default.css" />
-    <link rel="stylesheet" href="asset/CSS/index.css" />
-    <link rel="stylesheet" href="asset/CSS/nav.css">
-    <link rel="stylesheet" href="CSS/Components/animations.css" />
-    <link rel="stylesheet" href="asset/fonts/fontawesome-free-6.5.2-web/css/all.css" />
+    <link rel="stylesheet" href="../asset/CSS/default.css" />
+    <link rel="stylesheet" href="../asset/CSS/index.css" />
+    <link rel="stylesheet" href="../asset/CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/Components/animations.css" />
+    <link rel="stylesheet" href="../asset/fonts/fontawesome-free-6.5.2-web/css/all.css" />
     <script src="../asset/JS/nav.js"></script>
     <nav class="nav">
         <div class="lef">
@@ -17,6 +17,9 @@
                 </li>
                 <li>
                     <a href="../nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
+                </li>
+                <li>
+                    <a href="https://forum.adventurecraft.site/index.php"><i class="fa-brands fa-wpforms"></i>Forum</a>
                 </li>
                 <li>
                     <a href="#" class="top-ingame"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng </a>
