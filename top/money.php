@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css">
 
 
-    <title>Document</title>
+    <title>Bảng xếp hạng money</title>
 </head>
 
 <body>
@@ -44,7 +44,7 @@
                     <a href="die.php"><i class="fa-solid fa-medal"></i> Bảng xếp hạng Deads</a>
                 </li> -->
                 <li>
-                    <a href="point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
+                    <a href="point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng money</a>
                 </li>
                 <li>
                     <a href="money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>

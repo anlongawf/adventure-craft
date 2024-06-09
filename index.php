@@ -169,16 +169,15 @@
     <section class="features">
         <div class="feature-content page-width flex fc-1">
             <div class="feature-img">
-                <img src="asset/IMG/background.png" alt="Discord and Minecraft image and banner" />
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_U1GhLMVBhw" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
 
             <div class="feature-text">
-                <h1 class="panton">Game Play!</h1>
+                <h1 class="panton">Official Trailer</h1>
                 <p>
-                    Lối chơi hấp dẫn, đa dạng và phù hợp với tất cả cho những bạn thích
-                    chơi sinh tồn, xây nhà, PVP! Ngoài ra các bạn có thể chọn các nghề
-                    cho nhân vật của mình, mỗi nghề sẽ có một thuộc tính, vũ khí khác
-                    nhau!
+
                 </p>
             </div>
         </div>
@@ -189,12 +188,12 @@
             </div>
 
             <div class="feature-text feature-text-reverse">
-                <h1 class="panton">Friendly Community!</h1>
+                <h1 class="panton">Game Play!</h1>
                 <p>
-                    Chúng mình không đặt nặng số lượng người chơi có nhiều hay không,
-                    chúng mình đặt vào chất lượng của cộng đồng! Khi tham gia cộng đồng
-                    các bạn cần tuân thủ theo luật để chúng ta có thể cùng nhau tạo ra
-                    một cộng đồng văn minh!
+                    Lối chơi hấp dẫn, đa dạng và phù hợp với tất cả cho những bạn thích
+                    chơi sinh tồn, xây nhà, PVP! Ngoài ra các bạn có thể chọn các nghề
+                    cho nhân vật của mình, mỗi nghề sẽ có một thuộc tính, vũ khí khác
+                    nhau!
                 </p>
             </div>
         </div>
@@ -205,8 +204,11 @@
             </div>
 
             <div class="feature-text">
-                <h1 class="panton">Updated!</h1>
-                <p>...</p>
+                <h1 class="panton">Friendly Community!</h1>
+                <p>Chúng mình không đặt nặng số lượng người chơi có nhiều hay không,
+                    chúng mình đặt vào chất lượng của cộng đồng! Khi tham gia cộng đồng
+                    các bạn cần tuân thủ theo luật để chúng ta có thể cùng nhau tạo ra
+                    một cộng đồng văn minh!</p>
             </div>
         </div>
     </section>

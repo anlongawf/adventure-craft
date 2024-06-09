@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css">
 
 
-    <title>Document</title>
+    <title>Bảng xếp hạng cấp độ</title>
 </head>
 
 <body>
@@ -103,9 +103,9 @@
                     
                 ?>
                 <?php foreach ($result as $value):?>
-                    <tr>
-                        <td><?= $value['ranking']?></td>
-                        <td><?php
+                <tr>
+                    <td><?= $value['ranking']?></td>
+                    <td><?php
                             foreach ($listUUID as $item){
                                 if ($item['uuid'] === $value["uuid"]){
                                     echo $item['username'];
@@ -113,8 +113,8 @@
                                 }
                             }
                         ?></td>
-                        <td><?= $value['level']?></td>
-                        <td><?php
+                    <td><?= $value['level']?></td>
+                    <td><?php
                             $output = sqlCommand("mmocore","select DISTINCT level from mmocore_playerdata order by level desc limit 50")->fetchAll();
                             $listLevel = [];
                             foreach($output as $item){
@@ -132,7 +132,7 @@
                             }
                         
                         ?></td>
-                    </tr>    
+                </tr>
                 <?php endforeach?>
             </tbody>
         </table>
