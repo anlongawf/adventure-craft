@@ -95,7 +95,7 @@
                 <tr>
                     <th>Số thứ tự</th>
                     <th>Người chơi</th>
-                    <th>Xu</th>
+                    <th>Money</th>
                     <th>Top</th>
                 </tr>
             </thead>
