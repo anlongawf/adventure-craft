@@ -55,7 +55,7 @@
                     move_uploaded_file($tmp,"../asset/img-ranks/".$img);
                 }
                 if($this->rank->insertRank($nameRank,$group,$price,$img)){
-                    header("Location: ?act=/");
+                    header("Location: ?act=list-product");
                 } else {
                     echo "Lỗi";
                 }

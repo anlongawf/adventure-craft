@@ -39,7 +39,9 @@
         $whitelist->whitelist();
     } elseif ($act === "add-whitelist"){
         $whitelist->addWhitelist($_GET['name']);
-    } else if ($act === "remove-whitelist"){
+    } elseif ($act === "deny-whitelist"){
+        $whitelist->denyWhitelist($_GET['name']);
+    } elseif($act === "remove-whitelist"){
         $whitelist->removeWhitelist($_GET['name']);
     }
      else {

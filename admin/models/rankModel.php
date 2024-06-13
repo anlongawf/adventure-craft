@@ -25,7 +25,7 @@
             foreach ($quyenLoi as $item) {
                 $stmt = $this->conn->prepare("INSERT INTO quyenloi (quyen_loi, rank_group) VALUES ('$item', '$group')")->execute();
             }
-            header("Location: ?act=/");
+            header("Location: ?act=list-product");
         }
         function deleteRank($id,$group){
             $this->conn->prepare("DELETE FROM shoprank WHERE rank_id = '$id'")->execute();

@@ -12,21 +12,26 @@
             } else {
                 // tên ingame các mod
                 // Nếu không phải là các mod thì điều hướng về dashboard
-                if (!($_SESSION['taiKhoan'] === "AnTrc2" || $_SESSION['taiKhoan'] === "Ans")){
+                if (!($_SESSION['taiKhoan'] === "AnTrc2" || $_SESSION['taiKhoan'] === "Ans" || $_SESSION['taiKhoan'] === "Khoai456" || $_SESSION['taiKhoan'] === "Kayyaa705" || $_SESSION['taiKhoan'] === "Khoa1117" || $_SESSION['taiKhoan'] === "tomeme")){
                     header("Location: ?act=/");
                 } else {
-                    $allUser = $this->whitelist->listPlayerIsNotWhiteList();
+                    $outWhitelist = $this->whitelist->listPlayerIsNotWhiteList();
+                    $inWhitelist = $this->whitelist->inWhitelist();
+                    $deniedWhitelist = $this->whitelist->deniedWhitelist();
                     require_once "views/whitelist.php";
                 }
             }
         }
+        
         function addWhitelist($name){
             $this->whitelist->addWhitelist($name);
         }
+        function denyWhitelist($name){
+            $this->whitelist->denyWhitelist($name);
+        }
         function removeWhitelist($name){
-            if($this->whitelist->removeWhitelist($name)){
-                header("Location: ?act=white-list");
-            }
+            header("Location: ?act=white-list");
+            
         }
     }
 ?>

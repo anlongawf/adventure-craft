@@ -30,7 +30,7 @@
                     echo "b";
                 }
             }
-            header("Location: ?act=/");
+            header("Location: ?act=list-product");
         }
         function deletePet($id,$name){
             $this->conn->prepare("DELETE FROM shoppet WHERE pet_id = $id")->execute();

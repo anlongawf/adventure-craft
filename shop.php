@@ -30,56 +30,14 @@
 
 
     <title>Adventure Craft - Shop</title>
-    <!-- <script src="backend/JS/shop.js"></script> -->
-    <script src="backend/JS/check-login.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        checkLogin();
-    });
-    </script>
+    <script src="backend/JS/shop.js"></script>
     <script src="asset/JS/nav.js"></script>
 
 </head>
 
 <body>
 
-    <script src="asset/JS/nav.js"></script>
-    <nav class="nav">
-        <div class="lef">
-            <i class="fa-solid fa-bars menu" style="color:white">Menu</i>
-            <ul class="nav-left">
-                <li>
-                    <a href="index.php"><i class="fa-solid fa-house"></i> Trang chủ </a>
-                </li>
-                <li>
-                    <a href="shop.php"><i class="fa-solid fa-shop"></i> Cửa hàng</a>
-                </li>
-                <li>
-                    <a href="nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>
-                </li>
-                <li>
-                    <a href="#" class="top-ingame"><i class="fa-solid fa-chart-simple"></i>Bảng xếp hạng </a>
-                </li>
-            </ul>
-            <ul class="sub-menu">
-                <li>
-                    <a href="top/point.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Xu</a>
-                </li>
-                <li>
-                    <a href="top/money.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng Money</a>
-                </li>
-                <li>
-                    <a href="top/level.php"><i class="fa-solid fa-certificate"></i> Bảng xếp hạng cấp độ</a>
-                </li>
-            </ul>
-
-        </div>
-        <script src="../backend/JS/check-login2.js"></script>
-        <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            checkLogin();
-        });
-        </script>
+<?php require_once "components/navbar.php"?>
     </nav>
     <!--=== Header ===-->
     <header class="header header-text">
@@ -123,9 +81,7 @@
         </ul>
 
     </div>
-    <form action="" method="POST">
-        <button name="<?= $value['rank_group']?>" class="btn btn-dark" type="button"><?= $value['rank_price']?> Xu</button>
-    </form>
+        <button onclick="buyRank('<?= $group?>')" class="btn btn-dark" type="button"><?= $value['rank_price']?> Xu</button>
         </div>
         <?php endforeach ?>
             </div>
@@ -161,9 +117,7 @@
                     <br>
                     <p><strong><span>Giá bán:&nbsp;</span><span><?= $value['pet_price']?></span><span>&nbsp;xu</span></strong></p>
                 </div>
-                <form action="" method="POST">
                 <button name="<?= $value['pet_namePet']?>" class="buy-button btn btn-dark" type="button">Mua</button>
-                </form>
                 
             </div>
             <?php endforeach ?>

@@ -24,7 +24,7 @@
                 $canRide = $_POST['canRide'];
                 $canFly = $_POST['canFly'];
                 if ($this->pet->insertPet($namPet,$img,$price,$skinAmount,$canRide,$canFly,$perm)){
-                    header("Location: ?act=/");
+                    header("Location: ?act=list-product");
                 } else {
                     echo "Lỗi";
                 }
@@ -63,7 +63,7 @@
         function deletePet($id){
             $namePet = $this->pet->findPetById($id)['pet_namePet'];
             $this->pet->deletePet($id,$namePet);
-            header("Location: ?act=/");
+            header("Location: ?act=list-product");
         }
     }
 ?>

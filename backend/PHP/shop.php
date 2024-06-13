@@ -49,14 +49,22 @@
         $data = $connection->query($command)->fetch();
         return $data;
     }
+	function shop($command){
+		$connection = new PDO("mysql:host=103.237.87.46;dbname=shop","antrc2","Sqrtfl0@t01");
+        $data = $connection->query($command);
+        return $data;
+	}
     if (isset($_POST["buyRank"])) {
+		$group = $_POST['buyRank'];
+		$result = shop("SELECT * FROM shoprank WHERE rank_group = '$group'")->fetch();
+		$nameRank = $result['rank_nameRank'];
+		$price = $result['rank_price'];
         $username = $_SESSION["taiKhoan"];
-        $rank = $_POST["rank"];
-        $price = $_POST["price"];
-        echo $_SESSION["taiKhoan"]." đã mua rank $rank thành công!";
+		
         sendDiscordMessage($discordWebhook["console"],"playerpoints:p take ".$username." ".$price);
-        sendDiscordMessage($discordWebhook["shopLog"],date('d/m/Y H:i:s')." » **$username** đã mua rank **$rank** thành công");
-        sendDiscordMessage($discordWebhook["console"],"luckperms:lp user ".$username." parent set ".$rank);
+        sendDiscordMessage($discordWebhook["shopLog"],date('d/m/Y H:i:s')." » **$username** đã mua rank **$nameRank** thành công");
+        sendDiscordMessage($discordWebhook["console"],"luckperms:lp user ".$username." parent addtemp ".$group." 30d true");
+		echo "success";
         
         
     }
