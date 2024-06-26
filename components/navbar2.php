@@ -13,7 +13,7 @@
                     <a href="../index.php"><i class="fa-solid fa-house"></i> Trang chủ </a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-solid fa-shop"></i> Cửa hàng</a>
+                    <a href="../shop.php"><i class="fa-solid fa-shop"></i> Cửa hàng</a>
                 </li>
                 <li>
                     <a href="../nap-the/"><i class="fa-solid fa-circle-dollar-to-slot"></i>Nạp thẻ</a>

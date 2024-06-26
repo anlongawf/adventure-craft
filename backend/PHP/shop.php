@@ -63,7 +63,7 @@
 		
         sendDiscordMessage($discordWebhook["console"],"playerpoints:p take ".$username." ".$price);
         sendDiscordMessage($discordWebhook["shopLog"],date('d/m/Y H:i:s')." » **$username** đã mua rank **$nameRank** thành công");
-        sendDiscordMessage($discordWebhook["console"],"luckperms:lp user ".$username." parent addtemp ".$group." 30d true");
+        sendDiscordMessage($discordWebhook["console"],"luckperms:lp user ".$username." parent addtemp ".$group." 30d");
 		echo "success";
         
         
