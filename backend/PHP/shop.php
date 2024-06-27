@@ -45,12 +45,12 @@
 	}
     
     function sql($command){
-        $connection = new PDO("mysql:host=103.237.87.46;dbname=playerpoints","antrc2","Sqrtfl0@t01");
+        $connection = new PDO("mysql:host=adventurecraft.site;dbname=dptadven_playerpoints","dptadven_adventure","Sqrtfl0@t01");
         $data = $connection->query($command)->fetch();
         return $data;
     }
 	function shop($command){
-		$connection = new PDO("mysql:host=103.237.87.46;dbname=shop","antrc2","Sqrtfl0@t01");
+		$connection = new PDO("mysql:host=adventurecraft.site;dbname=dptadven_shop","dptadven_adventure","Sqrtfl0@t01");
         $data = $connection->query($command);
         return $data;
 	}

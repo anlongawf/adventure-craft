@@ -96,8 +96,8 @@
             <tbody>
                 <?php
                     require_once "../backend/PHP/function.php";
-                    $listUUID = sqlCommand("playerpoints","select * from playerpoints_username_cache")->fetchAll();
-                    $result = sqlCommand("mmocore","select DISTINCT ROW_NUMBER() OVER(ORDER BY level DESC) AS ranking, uuid, level from  mmocore_playerdata order by level desc limit 50")->fetchAll();
+                    $listUUID = sqlCommand("dptadven_playerpoints","select * from playerpoints_username_cache")->fetchAll();
+                    $result = sqlCommand("dptadven_mmocore","select DISTINCT ROW_NUMBER() OVER(ORDER BY level DESC) AS ranking, uuid, level from  mmocore_playerdata order by level desc limit 50")->fetchAll();
                     $mergedArray = [];
 
                     
@@ -115,7 +115,7 @@
                         ?></td>
                     <td><?= $value['level']?></td>
                     <td><?php
-                            $output = sqlCommand("mmocore","select DISTINCT level from mmocore_playerdata order by level desc limit 50")->fetchAll();
+                            $output = sqlCommand("dptadven_mmocore","select DISTINCT level from mmocore_playerdata order by level desc limit 50")->fetchAll();
                             $listLevel = [];
                             foreach($output as $item){
                                 $listLevel[] = $item['level'];

@@ -1,10 +1,10 @@
 <?php
     function connectDatabase(){
-        $conn = new PDO("mysql:host=adventurecraft.site;dbname=shop","antrc2","Sqrtfl0@t01");
+        $conn = new PDO("mysql:host=adventurecraft.site;dbname=dptadven_shop","dptadven_adventure","Sqrtfl0@t01");
         return $conn;
     }
     function authme(){
-        $conn = new PDO("mysql:host=adventurecraft.site;dbname=authme","antrc2","Sqrtfl0@t01");
+        $conn = new PDO("mysql:host=adventurecraft.site;dbname=dptadven_authme","dptadven_adventure","Sqrtfl0@t01");
         return $conn;
     }
     
